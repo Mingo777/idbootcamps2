@@ -1,0 +1,180 @@
+@import url(reset.css);
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    background-color: whitesmoke;
+}
+
+/* todas las imagenes deberan adaptarse a su contenedor al 100% de ancho que con altura automatica para no deformarse */
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1004px;
+    margin: 0 auto;
+}
+
+/* inicio header */
+
+header {
+    padding: 1em;
+    box-shadow: 0px 1px 10px #444;
+    border-bottom: 1px solid #ccc;
+}
+
+header figure {
+    width: 150px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin: 10px 5px;
+}
+
+header nav li a {
+    color: black;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+header nav li a:hover {
+    color: #999;
+}
+
+/* final de header */
+
+/* inicio hero */
+
+.hero {
+    background-image: url(../img/fondo.jpeg);
+    height: 55vh;
+    background-size: cover;
+    background-position: center center;
+    background-color: #999;
+    background-blend-mode: multiply;
+    /* alinear vertical y horizontalmente un elemento */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 3em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px black;
+}
+
+.hero h4 {
+    font-size: 1.15em;
+    margin: 25px 0px 15px 0px;
+}
+
+.hero ul li {
+    display: inline-block;
+}
+
+.hero li a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 80%;
+}
+
+.hero li:first-child a {
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.hero li:last-child a {
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+/* fin hero */
+
+/* inicio main */
+
+main {
+    margin-bottom: 30px;
+}
+
+main section h2 {
+    display: none;
+}
+
+main section div {
+    display: flex;
+}
+
+main section.container {
+    background-color: white;
+    padding: 30px;
+    border-top: 5px solid yellow;
+    margin-top: -60px;
+    color: #999;
+}
+
+main section article {
+    margin: 0px 10px;
+}
+
+main section article h3 {
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+main section article span {
+    color: teal;
+}
+
+main section article p {
+    line-height: 120%;
+}
+
+/* final main */
+
+footer {
+    background-color: black;
+    height: 50px;
+}
+
+@media(max-width: 37.500em) {
+    .hero h1 {
+        font-size: 2em;
+    }
+    main section div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px) {
+    header .container {
+        display: flex;
+        flex-direction: column;
+    }
+    header nav ul li {
+        display: block;
+        margin: 20px 5px 0px 5px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+    }
+}

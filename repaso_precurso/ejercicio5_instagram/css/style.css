@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.foto {
+    width: 900px;
+    background-image: url(../images/chica.jpg);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.foto div {
+    width: 300px;
+    height: 300px;
+    border: 15px solid white;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto div p {
+    display: none;
+}
+
+.foto div:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.foto div:hover p {
+    display: block;
+}

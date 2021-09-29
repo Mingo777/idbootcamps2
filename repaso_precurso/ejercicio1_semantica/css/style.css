@@ -1,0 +1,9 @@
+@import url(partials/header.css);
+/* inicio de footer */
+
+footer a {
+    color: green;
+    text-decoration: none;
+}
+
+/* final de footer */

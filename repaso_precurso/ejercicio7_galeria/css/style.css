@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+h1, h2 {
+    font-family: 'Libre Baskerville', serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+header, footer {
+    background-color: black;
+    color: white;
+}
+
+header {
+    text-align: center;
+    padding: 60px 0px 120px 0px;
+}
+
+header h2, header p {
+    color: #aaa;
+}
+
+main {
+    padding-bottom: 30px;
+}
+
+.row {
+    width: 95%;
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+main section {
+    margin-top: -30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section article {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+main section article .velo {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 1s;
+}
+
+footer {
+    padding: 10px 0px;
+}
+
+main section article h4 {
+    position: relative;
+    left: -500px;
+    transition: 1s;
+}
+
+main section article h3 {
+    position: relative;
+    right: -500px;
+    transition: 1s;
+}
+
+main section article:hover h4 {
+    left: 0px;
+}
+
+main section article:hover .velo {
+    opacity: 1;
+}
+
+main section article:hover h3 {
+    right: 0px;
+}
+
+main section article img {
+    transition: 1s;
+}
+
+main section article:hover img {
+    transform: rotateZ(5deg) scale(1.15);
+}
+
+@media(min-width: 500px) {
+    main section article {
+        width: 50%;
+    }
+}
