@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Definir el valor de una variable de manera condicional
+        /*
+            Sintaxis
+            --------
+
+            VARIABLE = CONDICIÓN ? VALOR si TRUE : VALOR si FALSE;
+        */
+
+        const nota = parseInt(prompt('Dime tu nota'));
+
+        let mensaje;
+        if (nota >= 0 && nota < 5) {
+            mensaje = 'Estás suspenso';
+        } else {
+            mensaje = 'Estás aprobado';
+        }
+
+        // TERNARIO
+        const mensaje2 = (nota >= 0 && nota < 5) ? 'suspenso' : 'aprobado';
+
+        // const mensaje3 = (nota >= 0 && nota < 5) ? 'suspenso' : (nota > 9) ? 'sobresaliente' : 'suficiente';
+
+
+    </script>
+</body>
+
+</html>

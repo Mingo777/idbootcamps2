@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+            Sintaxis
+            --------
+
+            if (CONDICIÓN) {
+                Sentencias a ejecutar si la condición es TRUE
+            }
+        */
+
+        const edad = parseInt(prompt('Dime tu edad'));
+
+        if (edad >= 18) {
+            console.log('Eres mayor de edad');
+        }
+
+        if (edad >= 18 && edad <= 65) {
+            console.log('A cotizar!!');
+        }
+
+        /*
+
+            if(CONDICIÓN){
+                sentencias a ejecutar si la condición es TRUE
+            }else{
+                sentencias a ejecutar si la condición es FALSE
+            }
+
+        */
+
+        if (edad >= 18) {
+            console.log('Eres mayor de edad');
+        } else {
+            console.log('NO eres mayor de edad. ¡Fuera!');
+        }
+
+        /*
+            - Pedir a través del PROMPT una nota
+            - Si la nota está entre 0 y 5 (no incluido) mostrar un mensaje de suspenso
+            - Si la nota es mayor que 5 mostrar un mensaje de aprobado
+        */
+
+        const nota = parseInt(prompt('Dime tu nota'));
+
+        if (nota >= 0 && nota < 5) {
+            console.log('SUSPENSO!!!!');
+        } else {
+            console.log('APROBADO');
+        }
+
+        // Con dos condicionales
+        if (nota >= 0 && nota < 5) {
+            console.log('SUSPENSO!!!!');
+        }
+
+        if (nota >= 5 && nota <= 10) {
+            console.log('APROBADO!');
+        }
+
+    </script>
+</body>
+
+</html>

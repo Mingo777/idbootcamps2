@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var usuario = 'Mario Girón';
+
+        var usuarioMayusculas = usuario.toUpperCase();
+        console.log(usuarioMayusculas);
+
+        console.log('ORIGINAL', usuario);
+        usuario = usuario.toLowerCase();
+        console.log('MINUSCULAS', usuario);
+
+        var numeroStr = "128.45";
+
+        // Método para transformar un string a number
+        var numero = parseInt(numeroStr);
+        console.log(numeroStr, numero);
+
+        // Librería Math
+        var numeroRound = Math.round(4.67); // camelcase
+        console.log('ROUND', numeroRound);
+        // round - ceil - floor
+
+        var aleatorio = Math.random();
+        console.log('RANDOM', aleatorio);
+
+        // var aleatorio2 = Math.random() * 100;
+        var aleatorio2Round = Math.round(Math.random() * 100);
+        console.log('RANDOM 2', aleatorio2Round);
+
+        // PROMPT
+        // var num = prompt('Dime un número');
+        var numEntero = parseInt(prompt('Dime un número'));
+        console.log(numEntero);
+
+    </script>
+</body>
+
+</html>

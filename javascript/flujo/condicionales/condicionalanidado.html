@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const nota = parseInt(prompt('Dime tu nota'));
+
+        if (nota >= 0 && nota < 5) {
+            console.log('¡Suspenso!');
+        } else if (nota >= 5 && nota <= 10) {
+            console.log('Aprobado');
+        }
+
+        /**
+         *
+         * Pedimos nota a través del PROMPT
+         *
+         * Mensajes a mostrar:
+         * 0-5 -> Suspenso 
+         * 5-6 -> Suficiente
+         * 6-7 -> Bien
+         * 7-9 -> Notable
+         * 9-10 -> Sobresaliente
+         * Otra cosa -> La nota es erronea
+         *
+         */
+
+        if (nota >= 0 && nota < 5) {
+            console.log('suspenso');
+        } else if (nota >= 5 && nota < 6) {
+            console.log('suficiente');
+        } else if (nota >= 6 && nota < 7) {
+            console.log('bien');
+        } else if (nota >= 7 && nota < 9) {
+            console.log('notable');
+        } else if (nota >= 9 && nota <= 10) {
+            console.log('sobresaliente');
+        } else {
+            console.log('la nota es erronea');
+        }
+
+    </script>
+</body>
+
+</html>

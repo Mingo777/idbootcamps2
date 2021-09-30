@@ -1,0 +1,1 @@
+console.log('Desde dentro del fichero');

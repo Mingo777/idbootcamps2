@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Título de la página</h1>
+    <script>
+        const nombre = prompt('Dime tu nombre');
+        const apellidos = prompt('Dime tus apellidos');
+        const edad = prompt('Dime tu edad');
+
+        const nombreCompleto = nombre + ' ' + apellidos;
+
+        console.log(nombreCompleto);
+
+        // Mi nombre es Mario y mi apellido es Girón y tengo 30 años
+
+        console.log('Mi nombre es ' + nombre + ' y mi apellido es ' + apellidos + ' y tengo ' + edad + ' años');
+
+        // Template Strings
+
+        document.write(`Mi nombre es ${nombre} y mi apellido es ${apellidos} y tengo ${edad} años`);
+
+    </script>
+</body>
+
+</html>
