@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 condicionales</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //quiero que me pidais por pantalla ancho, alto y color y segun los datos que recibais pintar un poligono de esas caracteristicas
+
+        //quiero que se pueda pintar rectangular o en forma circular.
+
+        const ancho = parseInt(prompt('Dame un ancho'));
+        const alto = parseInt(prompt('Dame un alto'));
+        const color = prompt('Dame un color');
+        const figura = prompt('Dime que figura quieres, circular o rectangular');
+
+
+        if (!isNaN(ancho) && !isNaN(alto)) {
+
+            const radio = (figura === 'circular') ? 50 : 0;
+
+            document.write('<div style="background-color: ' + color + '; width: ' + ancho + 'px; height: ' + alto + 'px; margin-bottom: 10px; border-radius: ' + radio + '% "></div>');
+        } else {
+            alert('los parametros son incorrectos');
+        }
+
+
+
+    </script>
+</body>
+
+</html>

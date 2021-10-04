@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 bucles</title>
+    <style>
+        .rojo {
+            background-color: tomato;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        //pedir un cantidad de cuadrados, pedir ancho
+
+        //situarlos en escalera
+
+        // cada 4 cuadrados invierte la escalera
+
+        const numeroCuadrados = parseInt(prompt('Dime un numero de cuadrados'));
+        const ancho = parseInt(prompt('Dime ancho de cuadrado'));
+        var contador = 0;
+        var direccion = true; //true es direccion positiva y false negativa
+
+
+        for (var i = 0; i < numeroCuadrados; i++) {
+
+            if (contador === 0) {
+                direccion = true;
+            } else if (contador === 4) {
+                direccion = false;
+            }
+
+
+            var cuadrado = '<div class="rojo" style="width: ' + ancho + 'px; height:' + ancho + 'px; margin-left: ' + ancho * contador + 'px"></div>'
+
+            document.write(cuadrado);
+            if (direccion === true) {
+                contador++;
+            } else if (direccion === false) {
+                contador--;
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

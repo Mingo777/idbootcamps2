@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 de condicionales</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //pedir una edad (numero) y genero (hombre, mujer)
+        //sacar por pantalla solo si es mujer y mayor de 15 años. Si no se cumple dicha condicion el programa no debera sacar ninguna mensaje.
+
+        // opcion 1 erronea 
+
+        const EDAD_CORTE = 15;
+        const edad = parseInt(prompt('Dime tu edad')); //parseFloat racional
+        //console.log(EDAD_CORTE === edad); //false
+        const genero = prompt('Dime tu genero').toLowerCase();
+
+
+        if (edad > 15) {
+            if (genero === 'mujer') {
+                alert('soy mujer mayor de 15 años');
+            }
+        }
+
+        // opcion 2 correcta
+
+        if (edad > 15 && genero === 'mujer') {
+            alert('soy mujer mayor de 15 años. 2')
+        } else {
+            alert('no cumples con las condiciones pedidas');
+        }
+
+    </script>
+
+
+</body>
+
+</html>

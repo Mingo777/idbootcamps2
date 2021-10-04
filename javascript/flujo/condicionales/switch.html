@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+
+<body>
+
+    <script>
+
+        //switch evalua caso y devuelven un valor en funcion de dichos casos. Inicialmente solo comprueba la existencia del elemento a comparar para posteriormente evaluar su valor.
+
+        //traductor de palabras
+
+        const color = prompt('Dame un color').toLowerCase();
+
+        switch (color) {
+
+            case 'rojo':
+            case 'bermellon':
+                alert('red');
+                break;
+
+            case 'azul':
+                alert('blue');
+                break;
+
+            case 'verde':
+                alert('green');
+                break;
+
+            default:
+                alert('la palabra no existe en el diccionario');
+                break;
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

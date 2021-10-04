@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 bucles</title>
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            /* background-color: black; */
+            margin: 10px;
+            color: white;
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        //quiero pintar n cuadrados, siendo n un numero pedido por pantalla.
+        //Cada cuadrado tendra dentro de si mismo un numero pero este tiene que ser aleatorio entre 1 y 100
+
+        //quiero que los cuadrados con numero par sean verdes y los impares sean rojos
+
+        //paso 1 pintar n cuadrados de un color
+        //paso 2 meter dentro de cada cuadrado un numero aleatorio
+        //paso 3 cambiar el color.
+
+
+        const numeroCuadrados = parseInt(prompt('Dame un numero de cuadrados')); //4
+
+        for (var i = 1; i <= numeroCuadrados; i++) {
+
+            var aleatorio = Math.trunc(Math.random() * 101); //0
+            //Math.trunc quedarse solo con la parte entera de un racional 12.456 -> 12
+            var color = (aleatorio % 2 === 0) ? 'green' : 'red';
+
+            document.write('<div class="cuadrado" style="background-color: ' + color + '">' + aleatorio + '</div>');
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
