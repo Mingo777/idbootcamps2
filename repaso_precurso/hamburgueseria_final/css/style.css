@@ -258,7 +258,7 @@ main section .underline hr {
     position: absolute;
     width: 100%;
     border-color: var(--colorprincipal);
-    top: -2px;
+    top: -1px;
 }
 
 main section .flex {
@@ -268,7 +268,7 @@ main section .flex {
 
 main section .flex article {
     width: 100%;
-    padding-bottom: 2em;
+    padding: 2em 0;
     border-bottom: 1px solid #aaa;
 }
 
@@ -277,7 +277,89 @@ main section .flex article h3 {
     margin: 0.5em 0em;
 }
 
+main section p {
+    color: #777;
+    line-height: 1.10em;
+    margin-bottom: 0.5em;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+main section .flex article div i {
+    border: 1px solid var(--colorprincipal);
+    color: var(--colorprincipal);
+    font-size: 150%;
+    padding: 0.5em;
+}
+
 /* fin de ourservices */
+
+/* inicio de aboutus */
+
+main section h3 {
+    font-weight: 700;
+    font-size: 110%;
+}
+
+main section h4 {
+    color: var(--colorprincipal);
+    margin: var(--margingrid) 0;
+}
+
+main #aboutus figure {
+    width: 90%;
+    margin: 2em auto;
+}
+
+main #aboutus figure .marco {
+    border: 3px solid var(--colorprincipal);
+    transform: rotateZ(10deg);
+    transition: 1s;
+}
+
+main #aboutus figure .marco img {
+    transform: rotateZ(-10deg);
+    transition: 1s;
+}
+
+main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
+    transform: rotateZ(0deg);
+}
+
+/* fin de aboutus */
+
+/* media de 600px */
+
+@media(min-width: 37.500em) {
+    main section .flex article {
+        width: calc(50% - (2*var(--margingrid)));
+        padding: 0em var(--margingrid);
+        border-left: 1px solid #aaa;
+        border-bottom: 0;
+        margin: var(--margingrid);
+    }
+    main section .flex article:last-child {
+        width: 100%;
+    }
+    main #aboutus .columna {
+        width: 50%;
+        padding: 1.5em;
+    }
+    main #aboutus figure {
+        width: 100%;
+        margin: 0em;
+    }
+}
+
+/* media de 768px */
 
 @media(min-width: 48em) {
     header .nav-top a span {
@@ -286,7 +368,15 @@ main section .flex article h3 {
     header .nav-top .container {
         justify-content: space-between;
     }
+    main section .flex article, main section .flex article:last-child {
+        width: calc(33.333% - (2*var(--margingrid)));
+    }
+    footer {
+        text-align: left;
+    }
 }
+
+/* media de 1004px */
 
 @media(min-width: 62.750em) {
     header nav .hamburguesa {
