@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio 4</title>
+</head>
+
+<body>
+
+    <script>
+
+        //neceisto una aplicacion que me permita controlar el stock de mi tienda de paraguas negros. Para ello necesito saber:
+        //Cuanto stock tengo de paraguas.
+        //Necesito poder añadir stock a mi tienda
+        //En mi tienda se puede comprar producto.
+        //Si tengo menos de 5 paraguas me lo debe avisar.
+
+        let stock = 125;
+
+        //funcion que me muestre por consola el stock total que tengo -> funcion flecha.
+
+        const mostrarStock = () => console.log(`Tu stock es de ${stock}`)
+
+        //necesito una funcion que me permita añadir producto al stock de mi tienda, me devolvera el stock nuevo despues de añadir. Funcion anonima
+
+        const addProduct = function (pCantidad) {
+            stock += pCantidad; //stock += stock + pCantidad;
+            mostrarStock();
+        }
+
+        //necesito algo que me permita a un usuario comprar paraguas, puede comprar los paraguas que quiera siempre que tengamos stock
+
+        const buyProduct = (pQuantity) => {
+            if (pQuantity > stock) {
+                return 'No tengo suficiente stock, solo tengo displonible ' + stock;
+            }
+            stock -= pQuantity
+            comprobarStock();
+        }
+
+        //necesito algo que me notifique cuando mi stock sea de 5 o menos.
+        //no solo hay que crear la accion si no saber cuando ejecutarla
+
+        function comprobarStock() {
+            const STOCK_MINIMO = 5;
+            if (stock <= STOCK_MINIMO) {
+                console.log('Tienes 5 paraguas o menos deberias comprar producto');
+            }
+        }
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

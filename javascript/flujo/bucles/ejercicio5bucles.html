@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Hacer un programa que solicite y visualice una serie de números distintos de cero. El programa debe terminar cuando introduzcamos el valor cero que no se debe visualizar. Finalmente se desea obtener la cantidad de valores leídos distintos de cero.
+
+        var resultado = "";
+
+        do {
+            var numero = prompt('Dame un numero');
+            if (numero !== '0') {
+                resultado = resultado + numero + ', ';
+            }
+            //resultado += numero + ", ";
+
+        } while (numero !== '0')
+
+        //resultado.length me devuelve la cantidad de caractes de la cadena
+
+
+        document.write(resultado.substring(0, resultado.length - 2));
+
+    </script>
+</body>
+
+</html>

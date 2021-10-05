@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        calcular('sumar', 1, 2, 3, 4, 5, 6)
+        calcular('multiplicar', 1, 2, 3, 4, 5, 6)
+
+        function calcular(pTipo, ...numeros) {
+
+            let resultado = (pTipo === "sumar") ? 0 : 1;
+
+            for (let i = 0; i < numeros.length; i++) {
+                switch (pTipo) {
+                    case 'sumar':
+                        //sumo
+                        resultado += numeros[i]
+                        break;
+
+                    case 'multiplicar':
+                        //multiplico
+                        resultado *= numeros[i];
+                        break;
+                }
+            }
+
+            console.log(resultado);
+
+        }
+
+
+
+    </script>
+</body>
+
+</html>

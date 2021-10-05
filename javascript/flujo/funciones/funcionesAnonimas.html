@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funciones anonimas</title>
+</head>
+
+<body>
+
+    <script>
+
+        //funciones anonimas son funciones que no tiene nombre.
+
+        //sumar de forma anonima.
+
+        const sumar = function (pNumero1, pNumero2) {
+            return pNumero1 + pNumero2;
+        }
+
+        let resultado = sumar(3, 4);
+
+        //una funcion que nos dijera si un numero introducido por parametro es par o impar.
+
+        const paridad = function (pNumero) {
+            let resultado = (pNumero % 2 === 0) ? 'par' : 'impar';
+            return resultado;
+        }
+
+        console.log(paridad(2)); //par
+        console.log(paridad(33)); //impar
+
+    </script>
+
+</body>
+
+</html>

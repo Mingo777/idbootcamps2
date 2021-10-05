@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito</title>
+</head>
+
+<body>
+
+    <script>
+        //variables puedes ser globales o locales. Global su valor es accesible desde cualquier punto de mi programacion. Local solo es accesible desde la estructura donde es creada.
+
+        //ambito funcional. El que tiene todos los lenguajes de programacion.
+
+        var nombre = "Juan"; //global
+        var estado = false; //global
+
+        if (estado === true) {
+            console.log(nombre);
+            var edad = 28 //global
+        }
+
+        console.log(edad);
+
+        function saludar() {
+            console.log('Hola ' + nombre);
+            var apellido = "Perez" //local
+            return apellido;
+        }
+
+        var miApellido = saludar();
+        console.log(miApellido);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

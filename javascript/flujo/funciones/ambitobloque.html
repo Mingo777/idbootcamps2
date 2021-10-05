@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambito de bloque</title>
+</head>
+
+<body>
+    <script>
+
+        //let y const tiene ambito de bloque (variables y constante)
+
+        //el ambito de bloque es global siempre y cuando se declare la variable fuera de cualquier estructura de flujo (fuera de cualquier {})
+
+        var ciudad = 'Madrid'; //global
+        let nombre = "Pepe"; //global
+        const PI = 3.141516; //global
+
+        if (nombre === 'Pepe') {
+            var edad = 23; //global
+            let apellido = "Lopez" //local
+            const gravedad = 9.8 //local
+        }
+
+        console.log(edad) //23
+        //console.log(apellido) //error
+
+        for (var i = 1; i < 10; i++) {
+            'i es de ambito global'
+        }
+
+        for (var j = 1; j < 10; j++) {
+            'j es de ambito global'
+        }
+
+
+        for (let i = 1; i < 10; i++) {
+            'i es de ambito local'
+        }
+
+        for (let i = 1; i < 10; i++) {
+            'i es de ambito local'
+        }
+
+        for (let i = 1; i < 10; i++) {
+            'i es de ambito local'
+        }
+
+
+
+    </script>
+</body>
+
+</html>

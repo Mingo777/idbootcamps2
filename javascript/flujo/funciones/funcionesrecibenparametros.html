@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funciones que reciben parametros</title>
+</head>
+
+<body>
+
+    <script>
+
+        //existen dos tipo de parametros o argumentos: obligatorio u optativo.
+
+        //una funcion puede recibir cualquier cantidad de parametros separados por comas, aunque las reglas de clean dictaminan que no mas de cuatros parametros.
+
+        // primero envio todos los parametros obligatorios y luego todos los parametros optativos.
+
+        function saludar(pNombre, pApellido = 'Lopez') {
+            document.write('<h1>Hola ' + pNombre + " " + pApellido + '</h1>');
+        }
+
+        saludar('Juan')
+        saludar('Natalia', 'Perez')
+
+        var nombre = "Jose";
+        var apellido = 'Garcia';
+        saludar(nombre, apellido);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

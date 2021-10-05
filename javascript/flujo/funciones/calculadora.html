@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        //realizar un programa que me permita recibir dos numeros cualesquiera y me pregunte que tipo operacion quiere realizar (suma, resta, multiplicacion). Posteriormente me pintará el resultado en el html (document.write);
+
+        // const numero1 = parseInt(prompt('Dame un numero'));
+        // const numero2 = parseInt(prompt('Dame otro numero'));
+        // const operacion = prompt('Dime que operacion quieres realizar, suma, resta o multiplicacion').toLowerCase();
+
+
+        //calcular(numero1, numero2, operacion);
+
+        function calcular(pNumero1, pNumero2, pOperacion) {
+            let resultado = 0;
+            switch (pOperacion) {
+                case 'suma':
+                    resultado = sumar(pNumero1, pNumero2);
+                    break;
+                case 'resta':
+                    resultado = restar(pNumero1, pNumero2);
+                    break;
+                case 'multiplicacion':
+                    resultado = multiplicar(pNumero1, pNumero2);
+                    break;
+                default:
+                    alert('operacion no permitida')
+                    break;
+            }
+
+            pintarResultado(resultado, pOperacion, pNumero1, pNumero2);
+        }
+
+        function sumar(pNumeroA, pNumeroB) {
+            return pNumeroA + pNumeroB;
+        }
+
+        function restar(pNumeroA, pNumeroB) {
+            return pNumeroA - pNumeroB;
+        }
+
+        function multiplicar(pNumeroA, pNumeroB) {
+            return pNumeroA * pNumeroB;
+        }
+
+        function pintarResultado(pResultado, pOperacion, pNumeroA, pNumeroB) {
+            document.write(`<h1>El resultado de hacer la ${pOperacion} del numero ${pNumeroA} y el numero ${pNumeroB} es ${pResultado} </h1>`);
+        }
+
+
+    </script>
+
+</body>
+
+</html>
