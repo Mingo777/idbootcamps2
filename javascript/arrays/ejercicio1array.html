@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 array</title>
+</head>
+
+<body>
+    <script>
+
+        //crear un array de numeros vacio.
+
+        // meter dentro de ese array 10 numeros aleatorios entre 1 y 100, los numeros tiene que ser enteros. No me lo hagais con una funcion.
+
+        const listaNumeros = new Array();
+
+        for (let i = 0; i < 10; i++) {
+            let numero = parseInt(Math.random() * 101)
+            listaNumeros[i] = numero;
+        }
+        console.log(listaNumeros);
+
+        //mostrar en un lista no numerada solo los numeros de la lista que son divisible por 3
+
+        function pintarLista(pArray) {
+            let ul = '<ul>';
+            for (let i = 0; i < pArray.length; i++) {
+                ul += `<li >${pArray[i]}</li>`;
+            }
+            ul += '</ul>'
+            document.write(ul);
+        }
+
+
+        function filtrarDivisibles(pLista, pNumeroDivisible) {
+            const listaFiltrada = new Array();
+            for (let i = 0; i < pLista.length; i++) {
+                if (pLista[i] % pNumeroDivisible === 0) {
+                    let posicion = listaFiltrada.length;
+                    listaFiltrada[posicion] = pLista[i]
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+        pintarLista(filtrarDivisibles(listaNumeros, 7))
+
+
+
+
+
+    </script>
+</body>
+
+</html>

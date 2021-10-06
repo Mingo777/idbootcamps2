@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array simple</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //const listaAlumnos = []; //array vacio.
+        const listaAlumnos = new Array('Natalia', 'Jorge', 'Fernando', 'Ivan', 'Carlos', 'Juan Miguel', 'Leo', 'Jose');
+
+        console.log(listaAlumnos);
+
+        //longitud de la lista - cantidad de elementos de la lista
+        console.log(listaAlumnos.length)
+
+        //acceder a al valor de elementos de la lista.
+        //una lista la posicion empieza en 0 y acaba en length-1 
+        console.log(listaAlumnos[2]); //Fernando
+
+        //vamos a pintar todo el listado de alumnos dentro de una lista no numerada de html
+
+        //que el color del texto de cada alumno fuera rojo y verde alternativamente
+
+        function pintarLista(pArray) {
+            let ul = '<ul>';
+            for (let i = 0; i < pArray.length; i++) {
+                let color = (i % 2 !== 0) ? 'red' : 'green';
+                ul += `<li style="color: ${color}">${pArray[i]}</li>`;
+            }
+            ul += '</ul>'
+            document.write(ul);
+        }
+
+        pintarLista(listaAlumnos);
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

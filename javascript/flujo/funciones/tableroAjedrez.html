@@ -54,6 +54,53 @@
         //2 es construir una fila - es que la fila tiene que poder elegir el color en el que empieza
         //3 contruir el tablero
 
+        function pintarUnaCasilla(pColor, pAncho) {
+            const casilla = `<div style="background-color: ${pColor}; width: ${pAncho}px; height: ${pAncho}px;"></div>`;
+            return casilla;
+        }
+
+        function pintarUnaFila(pNumeroCasillas, pTamano, pColorInicial) {
+            let fila = '<div style="display: flex;">'
+            let color = "";
+
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+                color = getColor(i, pColorInicial);
+                fila += pintarUnaCasilla(color, pTamano)
+            }
+            fila += '</div>'
+            document.write(fila);
+        }
+
+        function pintarTablero(pNumeroCasillas, pTamanoCasilla, pColor) {
+            for (let i = 1; i <= pNumeroCasillas; i++) {
+
+                let colorInicial = "";
+                colorInicial = getColor(i, pColor)
+                pintarUnaFila(pNumeroCasillas, pTamanoCasilla, colorInicial)
+            }
+        }
+
+        function getColor(pPosicion, pColorInicial) {
+            let color = "";
+            if (pColorInicial === 'black') {
+                color = (pPosicion % 2 !== 0) ? pColorInicial : 'grey';
+            } else {
+                color = (pPosicion % 2 !== 0) ? pColorInicial : 'black';
+            }
+            return color;
+        }
+
+        const numeroCasillas = parseInt(prompt('Dime cuantas casillas tiene el tablero'));
+        const tamano = parseInt(prompt('Dime tamaño de casilla en px'));
+        const color = prompt('Dame un color inicial, black or grey');
+
+        pintarTablero(numeroCasillas, tamano, color);
+
+
+
+
+
+
     </script>
 
 </body>

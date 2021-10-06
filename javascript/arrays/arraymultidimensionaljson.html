@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multidimensional de JSON</title>
+</head>
+
+<body>
+
+    <!-- <article class="alumno">
+        <h3>Nombre completo</h3>
+        <ul>
+            <li>Edad: 39</li>
+            <li>Nota Media: 10</li>
+        </ul>
+    </article>
+    <hr> -->
+
+
+    <script>
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan Antonio',
+                apellido: 'Perez',
+                edad: 39,
+                notamedia: 10
+            },
+            {
+                nombre: 'Manuel',
+                apellido: 'Castillo',
+                edad: 22,
+                notamedia: 3
+            },
+            {
+                nombre: 'Daniel',
+                apellido: 'Villamagna',
+                edad: 26,
+                notamedia: 7
+            },
+            {
+                nombre: 'Maria',
+                apellido: 'Lopez',
+                edad: 30,
+                notamedia: 4
+            }
+        )
+
+        console.log(listaAlumnos[2].edad); //26
+        console.log(listaAlumnos[2]['nombre']); //Daniel
+
+        function pintarUnAlumno(pObjAlumno) {
+            document.write(`<article class="alumno">
+                            <h3>${pObjAlumno.nombre} ${pObjAlumno.apellido}</h3>
+                                <ul>
+                                    <li>Edad: ${pObjAlumno.edad}</li>
+                                    <li>Nota Media: ${pObjAlumno.notamedia}</li>
+                                </ul>
+                             </article>
+                             <hr>`)
+        }
+
+        function pintarTodosAlumnos(pListaAlumnos) {
+            for (let alumno of pListaAlumnos) {
+                pintarUnAlumno(alumno)
+            }
+        }
+
+
+        // pintarTodosAlumnos(listaAlumnos)
+
+        //que mostreis todos los alumnos aprobados
+
+        /* function filtrarAprobados(pListaAlumnos) {
+            const listaFiltrada = new Array();
+
+            for (let alumno of pListaAlumnos) {
+                if (alumno.notamedia >= 5) {
+                    listaFiltrada[listaFiltrada.length] = alumno
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+        const listaAprobados = filtrarAprobados(listaAlumnos); */
+
+        function filterbyQualification(pList, pQaMin, pQaMax) {
+            const listaFiltrada = new Array();
+
+            for (let alumno of pList) {
+                if (alumno.notamedia >= pQaMin && alumno.notamedia <= pQaMax) {
+                    listaFiltrada[listaFiltrada.length] = alumno
+                }
+            }
+
+            return listaFiltrada;
+        }
+
+        let listaAprobados = filterbyQualification(listaAlumnos, 0, 4.99)
+        pintarTodosAlumnos(listaAprobados);
+
+
+        //sacar por pantalla los alumnos entre 18 y 25 años.
+
+        //sacar por pantalla el alumno con nombre concreto
+
+    </script>
+
+
+</body>
+
+</html>

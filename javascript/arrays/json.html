@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON - javascript object notation</title>
+</head>
+
+<body>
+    <script>
+
+        //json es el equivalente a lo que en otros de programacion conocemos con array asociativo. Este tipo de array elimina el concepto de posicion y lo sustituye por el concepto de clave.
+
+        //const producto =  new Object()
+        const producto = {
+            titulo: 'Leche desnatada',
+            precio: 0.50,
+            capacidad: 1.5,
+            stock: true
+        }
+
+        console.log(producto);
+
+        //opcion 1: nomenclatura de corchete (es la parecida a los arrays)
+        console.log(producto['titulo']); //Leche desnatada
+
+        //opcion 2: nomenclatura de punto (la mas utilizada) -> POO objeto.atributo
+
+        console.log(producto.capacidad); //1.5
+
+        const clave = "precio"
+        console.log(producto[clave])
+
+        //objetos tiene la particularidad de que una vez creados les puedo añadir nuevos elementos.
+
+        producto.fechaCaducidad = '14/10/2020';
+
+        console.log(producto);
+
+        //como recorren - pues podemos pintar la clave y el valor.
+
+        //FOR IN - para recorre JSON
+
+        for (let clave in producto) {
+            document.write(clave + ": " + producto[clave] + '<br>');
+        }
+
+    </script>
+</body>
+
+</html>

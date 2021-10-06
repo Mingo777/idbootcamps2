@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 array</title>
+</head>
+
+<body>
+
+    <script>
+
+        //A partir del siguiente array que se proporciona:
+
+        const valores = new Array(true, 5, false, 'hola', 'adios', 2, 3);
+
+        // 1. Determinar cual de los elementos de tipo texto es mas largo
+        // 2. Realizar la suma y multiplicacion de los elementos numericos del array.
+
+        function filterByType(pList, pType) {
+            const arrayOfType = new Array();
+
+            for (let i = 0; i < pList.length; i++) {
+                if (typeof pList[i] === pType) {
+                    arrayOfType[arrayOfType.length] = pList[i];
+                }
+            }
+
+            return arrayOfType;
+        }
+
+
+        function longerString(pArray) {
+
+            let longerString = "";
+
+            for (let i = 0; i < pArray.length; i++) {
+                if (pArray[i].length > longerString.length) {
+                    longerString = pArray[i];
+                }
+            }
+
+            return longerString;
+        }
+
+
+        let stringList = filterByType(valores, 'string');
+        console.log(longerString(stringList))
+
+        function sumar(pListNumber) {
+
+            let i = 0;
+            let suma = 0;
+            while (i < pListNumber.length) {
+                suma += pListNumber[i];
+                //suma = suma + pListNumber[i]
+                i++;
+            }
+            return suma;
+        }
+
+        let sum = sumar(filterByType(valores, 'number'));
+
+        function multiplicar(pListNumber) {
+
+            let multiplicacion = 1;
+            for (let i = 0; i < pListNumber.length; i++) {
+                multiplicacion *= pListNumber[i];
+                // multiplicacion = multiplicacion * pListaNumer[i]
+            }
+            return multiplicacion;
+        }
+
+        console.log(multiplicar(filterByType(valores, 'number')));
+
+
+    </script>
+
+
+</body>
+
+</html>

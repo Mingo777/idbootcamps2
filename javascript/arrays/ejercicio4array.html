@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+
+<body>
+
+    <script>
+
+        //for of: Tengo un listado de nombres quiero que me saqueis por pantalla aquellos nombre de logitud menor de 5 caractes. Cuando pinteis los nombre los teneis que numerar.
+
+        const nombres = new Array('Juan', 'Almudena', 'Rodrigo', 'Pepe', 'Ana', 'Maria', 'Lucia', 'Roberto');
+
+        const apellidos = new Array('Pérez', 'Lopez', 'Rodriguez', 'Olmo', 'Guitierrez', 'Torres', 'Alcalde', 'Lizcano');
+
+        /*
+            1 - Juan
+            2 - Pepe
+            3 - Ana
+        */
+
+        function numerar(pNameList, pLong) {
+            let cont = 1;
+            for (let nombre of pNameList) {
+                if (nombre.length < pLong) {
+                    console.log(cont + " - " + nombre);
+                    cont++;
+                }
+            }
+        }
+
+        // numerar(nombres, 4);
+        numerar(apellidos, 7);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

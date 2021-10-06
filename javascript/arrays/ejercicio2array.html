@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 array</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaNombre = new Array('Ana', 'Natalia', 'Pepe', 'Juan', 'Lucia', 'Antonio', 'Alejandro', 'almudena');
+
+        //pintar por pantalla un listado no numerado de los nombre que empiecen por a.
+
+        const texto = "Solo se que no se nada";
+        // console.log(texto[0]); //S
+
+
+        function filtraNombre(pLista, pLetra) {
+            const listaFiltrada = new Array();
+            for (let i = 0; i < pLista.length; i++) {
+                if (pLista[i][0].toLowerCase() === pLetra) {
+                    listaFiltrada[listaFiltrada.length] = pLista[i]
+                }
+            }
+
+            return listaFiltrada
+        }
+        function pintarLista(pArray) {
+            let ul = '<ul>';
+            for (let i = 0; i < pArray.length; i++) {
+                ul += `<li >${pArray[i]}</li>`;
+            }
+            ul += '</ul>'
+            document.write(ul);
+        }
+
+        let miLista = filtraNombre(listaNombre, 'a');
+        pintarLista(miLista);
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
