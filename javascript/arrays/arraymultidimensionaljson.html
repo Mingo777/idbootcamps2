@@ -36,7 +36,7 @@
                 notamedia: 3
             },
             {
-                nombre: 'Daniel',
+                nombre: 'Maria',
                 apellido: 'Villamagna',
                 edad: 26,
                 notamedia: 7
@@ -101,12 +101,47 @@
         }
 
         let listaAprobados = filterbyQualification(listaAlumnos, 0, 4.99)
-        pintarTodosAlumnos(listaAprobados);
+        // pintarTodosAlumnos(listaAprobados);
 
 
         //sacar por pantalla los alumnos entre 18 y 25 años.
 
+
+        function filterByAge(pAgeMin, pAgeMax, pList) {
+            let listaAlumnosXEdad = new Array()
+            let contador = 0;
+            for (let alumno of pList) {
+                if (alumno.edad >= pAgeMin && alumno.edad <= pAgeMax) {
+                    listaAlumnosXEdad[contador] = alumno;
+                    contador++;
+                }
+            }
+            return listaAlumnosXEdad;
+        }
+
+        let listaAlumnoFiltrada1845 = filterByAge(18, 45, listaAlumnos);
+        //pintarTodosAlumnos(listaAlumnoFiltrada1845);
+
+
         //sacar por pantalla el alumno con nombre concreto
+
+        function filterByName(pBusqueda, pList) {
+
+            let resultadoBusqueda = new Array();
+            let contador = 0;
+            for (let alumno of pList) {
+                if (alumno.nombre === pBusqueda) {
+                    resultadoBusqueda[contador] = alumno;
+                    contador++;
+                }
+            }
+
+            return resultadoBusqueda;
+        }
+
+        pintarTodosAlumnos(filterByName('Maria', listaAlumnos)) //callback
+
+
 
     </script>
 

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Metodos Array 1</title>
+</head>
+
+<body>
+
+    <script>
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Jorge',
+                edad: 30
+            },
+            {
+                nombre: 'Natalia',
+                edad: 24
+            },
+            {
+                nombre: 'Jose',
+                edad: 30
+            },
+            {
+                nombre: 'Fernando',
+                edad: 34
+            }
+        )
+
+        //dado un array multidimensional json quiero que me devolvais un array simple con los nombres de los alumnos.
+
+
+        //opcion 1
+        const listaNombres = new Array();
+        for (let alumno of listaAlumnos) {
+            listaNombres.push(alumno.nombre);
+        }
+
+        console.log(listaNombres);
+
+        //opcion 2
+
+        const listaNombres2 = new Array();
+        listaAlumnos.forEach(alumno => listaNombres2.push(alumno.nombre));
+        console.log(listaNombres2);
+
+
+        //opcion 3 
+
+        const listaNombres3 = listaAlumnos.map(alumno => alumno.nombre);
+        console.log(listaNombres3);
+
+    </script>
+
+
+</body>
+
+</html>

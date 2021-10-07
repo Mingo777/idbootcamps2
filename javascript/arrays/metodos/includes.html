@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Includes</title>
+</head>
+
+<body>
+
+    <script>
+
+        //me permite buscar dentro de un string otro string. Me devuelve true o false si existe dentro del string principal el secundario.
+
+        let frase = 'En un lugar de la mancha';
+        let palabra = 'Mancha'
+
+        let busqueda = frase.toLowerCase().includes(palabra.toLowerCase()); //true
+
+        console.log(busqueda);
+
+        //aplicado a array simples
+
+        const animales = new Array('perro', 'gato', 'periquito');
+
+        let animal = 'Gato';
+
+        let busqueda2 = animales.includes(animal.toLowerCase());
+
+        //aplicado a array multidimensionales.
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Jorge',
+                edad: 30
+            },
+            {
+                nombre: 'Natalia',
+                edad: 24
+            },
+            {
+                nombre: 'Jose',
+                edad: 30
+            },
+            {
+                nombre: 'Fernando',
+                edad: 34
+            }
+        )
+
+        //quiero encontrar los alumnos que contenga una p dentro del nombre
+
+        let letra = 'n';
+
+        const listaFiltrada = listaAlumnos.filter(alumno => {
+            //incluya la palabra en cualquier parte del texto
+            //return alumno.nombre.toLowerCase().includes(letra.toLowerCase());
+
+            //incluya la palabra al principio del texto.
+            //return alumno.nombre.toLowerCase().startsWith(letra.toLowerCase());
+
+
+            //incluya la palabra al final del texto
+            return alumno.nombre.toLowerCase().endsWith(letra.toLowerCase());
+        })
+        console.log(listaFiltrada);
+
+    </script>
+
+</body>
+
+</html>

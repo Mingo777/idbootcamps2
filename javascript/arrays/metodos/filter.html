@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //filter es un metodo que me permite buscar más de un item dentro de una lista que cumpla la funcion de condicion.
+
+
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Jorge',
+                edad: 30
+            },
+            {
+                nombre: 'Natalia',
+                edad: 24
+            },
+            {
+                nombre: 'Jose',
+                edad: 30
+            },
+            {
+                nombre: 'Fernando',
+                edad: 34
+            }
+        )
+
+        //dame los alumnos  de 30 años o menos.
+
+        let edadbusqueda = 30;
+
+        const alumnosBuscados = listaAlumnos.filter(alumno => alumno.edad <= edadbusqueda);
+
+        console.log(alumnosBuscados);
+
+
+
+    </script>
+</body>
+
+</html>

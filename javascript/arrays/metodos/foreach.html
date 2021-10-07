@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach</title>
+</head>
+
+<body>
+
+    <script>
+        const listaAlumnos = new Array(
+            {
+                nombre: 'Juan',
+                edad: 39
+            },
+            {
+                nombre: 'Jorge',
+                edad: 30
+            },
+            {
+                nombre: 'Natalia',
+                edad: 24
+            },
+            {
+                nombre: 'Jose',
+                edad: 30
+            },
+            {
+                nombre: 'Fernando',
+                edad: 34
+            }
+        )
+
+        let html = "";
+
+        listaAlumnos.forEach((alumno, index) => {
+            html += `<div>
+                       <h3>${index} - ${alumno.nombre}</h3> 
+                        <p>Edad: ${alumno.edad}</p>
+                </div>`
+        })
+
+        document.write(html)
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSH</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        //me permite introducir elementos dentro un array en la ultima posicion disponible. Por el final. Vale para cualquier tipo de array
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Periquito');
+
+        let animal = 'Cuervo';
+
+        //push devuelve la longitud nueva de mi array despues de hacer push
+        let longitud = listaAnimales.push(animal, 'Hipopotamo');
+
+        console.log(longitud);
+        console.log(listaAnimales);
+
+
+
+    </script>
+</body>
+
+</html>

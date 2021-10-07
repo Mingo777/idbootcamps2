@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodo Reduce</title>
+</head>
+
+<body>
+
+    <script>
+        //reduce, recorre todos los elementos del array devolviendo un resultado unico que impleque a todo los elementos del array.
+
+        const nominas = new Array(
+            {
+                id: 1,
+                nombre: 'Juan',
+                bruto: 30000,
+                irpf: 19,
+                pagas: 12,
+            },
+            {
+                id: 2,
+                nombre: 'Manu',
+                bruto: 20000,
+                irpf: 15,
+                pagas: 14,
+            },
+            {
+                id: 3,
+                nombre: 'Ruben',
+                bruto: 22000,
+                irpf: 17,
+                pagas: 16,
+            },
+            {
+                id: 4,
+                nombre: 'Danny',
+                bruto: 19000,
+                irpf: 14,
+                pagas: 12,
+            },
+        )
+
+        const listaSueldos = nominas.map(nomina => nomina.bruto);
+
+        const totalSueldos = listaSueldos.reduce((acumulador, valor) => {
+            return acumulador + valor;
+        })
+
+        console.log(totalSueldos);
+
+
+
+    </script>
+
+</body>
+
+</html>

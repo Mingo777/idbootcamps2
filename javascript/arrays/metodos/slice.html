@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice</title>
+</head>
+
+<body>
+
+    <script>
+        //slice captura uno o varios elementos de mi array en la posicion que yo quiera. Si son varios elementos estos deben ser consecutivos. Recibe dos parametros el primero la posicion desde la que empiezo , el segundo la posicion a la que llego, pero sin incluirla. Slice no modifica el array principal genera copias.
+
+
+        const listaAnimales = new Array('Perro', 'Gato', 'Aguila', 'Hipopotamo', 'Periquito');
+
+
+        //concat sirve para unir dos o mas arrays en uno.
+        const animalesDomesticos = listaAnimales.slice(0, 2).concat(listaAnimales.slice(4, 5))
+
+        console.log(animalesDomesticos);
+
+
+        //copiar el ultimo elemento de una lista.
+
+        console.log(listaAnimales.slice(listaAnimales.length - 1, listaAnimales.length))
+
+        console.log(listaAnimales.slice(-1)); //primer elemento por el final
+
+        console.log(listaAnimales.slice(-2, -1)); //la penultima posicion menos la ultima
+
+
+
+    </script>
+
+</body>
+
+</html>
