@@ -336,6 +336,70 @@ main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
 
 /* fin de aboutus */
 
+/* inicio menu */
+
+main #menu {
+    background-color: var(--colorsecundario);
+    height: 90vh;
+}
+
+main #menu h2 {
+    color: white;
+}
+
+main #menu .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #menu aside {
+    width: 100%;
+}
+
+main #menu .platos {
+    width: 100%;
+    background-color: red;
+}
+
+main #menu .flex .platos article {
+    display: flex;
+    flex-wrap: wrap;
+    border: 0;
+    margin: 0;
+    padding: 20px;
+}
+
+main #menu .platos article figure {
+    height: 100px;
+    background-color: white;
+    width: 100%;
+}
+
+main #menu .flex .platos article .texto {
+    height: 100px;
+    background-color: black;
+    width: 100%;
+}
+
+main #menu aside ul li {
+    margin: 10px;
+}
+
+main #menu aside ul li a {
+    display: block;
+    background-color: transparent;
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+main #menu aside ul li a:hover, main #menu aside ul .activo a {
+    background-color: var(--colorprincipal);
+}
+
+/* fin de menu */
+
 /* media de 600px */
 
 @media(min-width: 37.500em) {
@@ -357,6 +421,9 @@ main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
         width: 100%;
         margin: 0em;
     }
+    main #menu .flex article {
+        width: 100%;
+    }
 }
 
 /* media de 768px */
@@ -373,6 +440,9 @@ main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
     }
     footer {
         text-align: left;
+    }
+    main #menu .flex article {
+        width: 100%;
     }
 }
 
@@ -393,5 +463,20 @@ main #aboutus figure:hover .marco, main #aboutus figure:hover .marco img {
     header nav .menu a {
         border: 0px;
         padding: 0.4em 1.25em;
+    }
+    main #menu aside {
+        width: 30%;
+    }
+    main #menu .platos {
+        width: 70%;
+    }
+    main #menu .flex article {
+        width: 100%;
+    }
+    main #menu .platos article figure {
+        width: 30%;
+    }
+    main #menu .flex .platos article .texto {
+        width: 70%;
     }
 }
