@@ -53,6 +53,13 @@
         console.log(totalSueldos);
 
 
+        //reduce sobre el array completo
+
+        const total = nominas.reduce((previousValue, currentValue) => {
+            return { bruto: previousValue.bruto + currentValue.bruto }
+        });
+        console.log(total.bruto);
+
 
     </script>
 

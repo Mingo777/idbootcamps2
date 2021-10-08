@@ -55,3 +55,10 @@ const animales = new Array(
 //crear un funcion que me permita insertar un animal dentro del array.
 
 //filtrar animales por peligrosidad
+
+//buscar un animal por nombre, el nombre a buscar no tiene que estar necesariamente completo le -> leon, leopardo. Buscador semantico.
+
+
+//borrar elementos de la lista.
+
+
