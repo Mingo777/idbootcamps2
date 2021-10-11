@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>getElementsByClassName</title>
+</head>
+
+<body>
+
+    <p class="impar">Item 1</p>
+    <p class="par">Item 2</p>
+    <p class="impar">Item 3</p>
+    <p class="par">Item 4</p>
+    <p class="impar">Item 5</p>
+    <div>
+        <p class="par">Item 6</p>
+    </div>
+    <p>otro p sin clase</p>
+
+    <div class="impar"> Hola como estas</div>
+
+    <!-- p*10{item $} -->
+    <script>
+
+        //todos los parrafos
+        const todosLosParrafos = document.getElementsByTagName('p');
+
+        //todos los parrafos con clase impares
+
+        const impares = document.getElementsByClassName('impar');
+        const pares = document.getElementsByClassName('par');
+
+        console.log(todosLosParrafos);
+        console.log(impares);
+        console.log(pares);
+
+        for (let impar of impares) {
+            impar.innerText += ' impar'
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

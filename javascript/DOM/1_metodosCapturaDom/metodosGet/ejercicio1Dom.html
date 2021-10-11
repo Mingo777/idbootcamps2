@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 DOM</title>
+</head>
+
+<body>
+
+    <header>
+        <ul></ul>
+    </header>
+
+    <footer>
+        <ul></ul>
+    </footer>
+
+    <script>
+
+        const menuPrincipal = new Array('Home', 'Servicios', 'Contacto');
+        const legal = new Array('Privacidad', 'Cookies');
+
+        //pintar cada li con su enlace dentro del listado correspodiente.
+        //menuPrincipal en el header
+        //legal en el footer.
+
+        //capturar los elementos que vamos a necesitar
+
+        //opcion 1  de capturar un ul concreto.
+        const uls = document.getElementsByTagName('ul'); //2
+        const menu = uls[0]
+
+        console.log(menu);
+
+        //opcion 2 ir especificando
+        const footer = document.getElementsByTagName('footer')[0]
+
+        const menuLegal = footer.getElementsByTagName('ul')[0];
+
+        //llenar dichos elementos con los arrays creando los li con los enlaces. innerHTML e innerText
+
+        function pintarMenu(pLista, pSeccion) {
+            for (let seccion of pLista) {
+                pSeccion.innerHTML += `<li><a href="${seccion.toLowerCase()}.html">${seccion}</a></li>`
+            }
+        }
+
+        pintarMenu(menuPrincipal, menu);
+        pintarMenu(legal, menuLegal);
+
+
+
+
+    </script>
+</body>
+
+</html>

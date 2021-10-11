@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementById</title>
+</head>
+
+<body>
+
+    <section id="about">
+        <h2>About us</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id nostrum laudantium deleniti placeat sint
+            temporibus incidunt maxime voluptates in. Mollitia culpa aliquid consequuntur? Inventore voluptatem, ab
+            voluptatum aliquam blanditiis quod.</p>
+    </section>
+
+
+    <section id="services">
+        <h2>Services</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias modi nihil minima sint impedit, fuga tempora
+            debitis. Incidunt at, reiciendis omnis, ex assumenda eveniet optio, culpa mollitia illum quo nisi.</p>
+    </section>
+
+
+    <script>
+
+        //quiero modificar solo los parrafos de la seccion services.
+        const services = document.getElementById('services');
+        const parrafos = services.getElementsByTagName('p');
+
+        parrafos[0].innerText = "Lo que sea que queramos cambiar dentro del parrafo";
+
+    </script>
+
+</body>
+
+</html>

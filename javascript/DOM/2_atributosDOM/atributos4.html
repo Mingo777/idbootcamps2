@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos style</title>
+</head>
+
+<body>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus, deleniti perferendis optio quis sunt
+        laborum sequi illum officiis molestiae, natus facilis nisi. Odio iste commodi fugit suscipit placeat voluptas
+        molestiae!</p>
+
+    <script>
+
+        //quiero pintar los parrafos pares de color de fondo negro y texto blanco, y los impartes de color de fondo blanck y texto negro. Ambos tendrán un padding de 10px por todos los lados.
+
+        //capturar los parrafos
+
+        const parrafos = document.querySelectorAll('p');
+
+        parrafos.forEach((parrafo, index) => {
+            index++;
+            if (index % 2 === 0) {
+                parrafo.style.color = 'white';
+                parrafo.style.backgroundColor = "black"
+            }
+            parrafo.style.padding = '10px';
+        });
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

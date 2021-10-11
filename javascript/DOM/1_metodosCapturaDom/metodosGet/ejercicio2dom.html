@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2 Dom</title>
+</head>
+
+<body>
+
+    <section id="clasicos">
+        <h2>Clasicos</h2>
+        <!--   <article>
+                <h3>Titulo del libro</h3>
+                <p>Autor: Autor libro</p>
+            </article> -->
+    </section>
+    <hr>
+    <section id="novedades">
+        <h2>Novedades</h2>
+    </section>
+    <script>
+
+        const libros = new Array(
+            {
+                titulo: 'El quijote',
+                autor: 'Cervantes',
+                categoria: 'clasicos'
+            },
+            {
+                titulo: 'A fuego lento',
+                autor: 'Paula Hawkins',
+                categoria: 'novedades'
+            },
+            {
+                titulo: 'Despues',
+                autor: 'Stephen King',
+                categoria: 'novedades'
+            },
+            {
+                titulo: 'Liberado',
+                autor: 'E.L. James',
+                categoria: 'novedades'
+            },
+            {
+                titulo: 'El arbol de la ciencia',
+                autor: 'Pio Baroja',
+                categoria: 'clasicos'
+            }
+        )
+
+        //capturar los elementos del html con los que vamos a trabajar.
+
+        const seccionClasicos = document.getElementById('clasicos');
+        const seccionNovedades = document.getElementById('novedades');
+
+        //pintar la una lista de libros de cualquier longitud dentro de la seccion correspondiente.
+
+        function printList(pLista, pSeccion) {
+            pLista.forEach(libro => printBook(libro, pSeccion));
+        }
+
+        function printBook(pBook, pSeccion) {
+            //innerHTML o innerText
+            pSeccion.innerHTML += `<article>
+                <h3>${pBook.titulo}</h3>
+                <p>Autor: ${pBook.autor}</p>
+            </article>`
+        }
+
+        //printList(libros, seccionNovedades)
+
+        //filtrar la lista por categorias, que me devolvais una lista con los libros de una categoria.
+
+        function filterByCategory(pLista, pCat) {
+
+            const filterList = pLista.filter(libro => libro.categoria === pCat);
+
+            return filterList;
+        }
+
+        //opcion 1 filtro la categoria y la guardo en un variable posteriormente pinto esa lista mas corta.
+
+        let listaNovedades = filterByCategory(libros, 'novedades');
+        printList(listaNovedades, seccionNovedades);
+
+        //opcion 2 usando un callback
+
+        printList(filterByCategory(libros, 'clasicos'), seccionClasicos);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .circulo {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+            margin: 10px;
+            border-radius: 50%;
+        }
+
+        .rojo {
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="circulo" style="margin-left: 200px;" id="circulito"></div>
+
+
+    <script>
+
+        //setAtribute podemos modificar el valor de cualquier atributo llamando a este metodo y pasandole por parametros el atributo que queremos modificar, como segundo parametro le pasaremos el valor que queremos modificar.
+
+        const circulo = document.getElementById('circulito');
+
+        //modificar la clase
+        circulo.setAttribute('class', 'circulo rojo')
+
+        //crear un nuevo atributo
+        circulo.setAttribute('rel', 'hola');
+
+        //stylos
+
+        circulo.setAttribute('style', 'background-color: salmon; margin-left: 100px; border-radius: 10px');
+
+
+        //getAttribute puede obtener el valor el atributo o elemento
+
+        console.log(circulo.getAttribute('id')); //circulito
+        console.log(circulo.getAttribute('style'));
+    </script>
+</body>
+
+</html>

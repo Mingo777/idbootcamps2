@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos DOM</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        figure {
+            max-width: 400px;
+            margin: 40px auto;
+            padding: 10px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <figure>
+        <img src="img/imagen1.jpg">
+    </figure>
+
+
+    <script>
+
+        //capturar el img - los elementos del DOM es buena practica capturas en variables o constantes globales.
+
+        const image = document.querySelector('figure img');
+
+        //crear una funcion que me permite cambiar el src de la imagen por la imagen que yo decida (que pase por parametro);
+
+        function changeImg(pImagen) {
+            image.src = `img/imagen${pImagen}.jpg`
+        }
+
+        //para realizar un carrusel automatico de fotos la imagen tiene que cambiar cada x segundos. Para ello necesito que muy funcion changeImg se llame cada x segundos. Funciones intervalicas hay 2 tipos.
+
+        //setTimeOut() -> se la pasa dos parametros, el primero es una función de callback, y el segundo es el tiempo en milisegundos que tarda en ejecutarse la funcion. Función de espera
+
+        //setInterval() -> se le pasa dos parametros, el pirmero es una función de callback, el segundo es el tiempo en milisegundos  que tarda en repetirse la semana a la funcion. Es repetitiva ocurre mas de una vez.
+
+        //una buena practica con las funciones de intervalo es declararlas dentro de un const para poderlas parar en un futuro
+
+        let numeroImagen = 2;
+        let numeroTotal = 3;
+        const intervalo = setInterval(function () {
+            numeroImagen = (numeroImagen >= numeroTotal) ? 1 : numeroImagen + 1;
+            changeImg(numeroImagen);
+        }, 2000);
+
+        function pararCarrusel() {
+            clearInterval(intervalo)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul class="menu">
+        <!-- li*3>a>{Item $}-->
+        <li><a href="">Item 1</a></li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+    </ul>
+
+
+    <script>
+
+        //querySelectorAll seleccion del html todos los elementos de la lista de nodos que cumplan con la condicion css puesta entre parentesis.
+
+        //los metodos get me devolvian un array que era un HTMLColletion que no tiene todas las propiedades de un array. No puedo hacer forEach
+
+        //querySelectorAll obtiene una NodeList que tampoco es un array completo pero tiene algunos metodos de array disponibles. Por ejemplo forEach.
+
+        //coger todos a dentro de menu y cambiarles el texto.
+
+        //metodos get
+        const menu = document.getElementsByClassName('menu')[0];
+        const enlacesGet = menu.getElementsByTagName('a'); //HTMLColletion
+
+        for (let enlace of enlacesGet) {
+            enlace.innerText = 'Juan'
+        }
+
+        //metodos querySelectorAll
+
+        const enlacesQuery = document.querySelectorAll('.menu li a'); //NodeList
+        enlacesQuery.forEach(enlace => enlace.innerText = 'Esta forma es mas corta y mona');
+
+
+
+    </script>
+</body>
+
+</html>

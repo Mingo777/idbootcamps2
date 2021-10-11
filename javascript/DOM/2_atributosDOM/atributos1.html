@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atributos del DOM</title>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li><a href="https://www.amazon.es">Amazon</a></li>
+        <li><a href="https://www.google.es">Google</a></li>
+        <li><a href="https://www.yahoo.es">Yahoo</a></li>
+    </ul>
+
+
+    <script>
+        //quiero cambiar la propiedad href de todos los enlaces de la pagina
+
+        const enlaces = document.querySelectorAll('#menu a');
+
+        for (let enlace of enlaces) {
+            enlace.href = "http://www.estudioclandestino.es";
+            enlace.target = '_blank';
+            enlace.title = ' Estudio Clandestino donde trabaja el mejor profe del mundo'
+        }
+
+
+
+    </script>
+</body>
+
+</html>

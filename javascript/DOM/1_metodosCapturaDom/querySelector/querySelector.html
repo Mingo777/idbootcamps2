@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuerySelector</title>
+</head>
+
+<body>
+
+    <span>Hola</span>
+
+    <ul class="menu">
+        <!-- li*3>a>{Item $}-->
+        <li><a href="">Item 1</a></li>
+        <li><a href="">Item 2</a></li>
+        <li><a href="">Item 3</a></li>
+    </ul>
+
+
+    <div class="menu"></div>
+
+    <div id="cuadrado"></div>
+
+
+    <script>
+        //querySelector me permite capturar cualquier objeto de DOM en una variable javascript. El metodo de captura de dicho objeto es similar al que utilizamos con herencia en css.
+
+        //quiero capturar todos los a de menu y cambiar el texto
+
+        //metodos get
+        const menus = document.getElementsByClassName('menu');
+        let menu = menus[0];
+
+        let enlaces = menu.getElementsByTagName('a');
+        enlaces[1].innerText = 'hola que tal';
+
+        //metodo querySelector. Selecciona el primer elemento que cumple la condicion marcada de herencia css.
+
+        let enlace3 = document.querySelector('.menu li:nth-child(3) a');
+        enlace3.innerText = "cambiando desde querySelector";
+
+        //meter texto dentro del cuadrado.
+        let texto = "En un lugar de la mancha";
+        const cuadrado = document.querySelector('#cuadrado');
+        cuadrado.innerText = texto;
+
+        //coger todos a dentro de menu. Solo recoge el primer a.
+
+        let misAs = document.querySelector('.menu li a');
+        misAs.innerText = 'jjjjjjj'
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>getElementsByTagName - metodos de captura del dom</title>
+</head>
+
+<body>
+
+    <p class="juan"><strong>Juan</strong></p>
+    <p>Pepe</p>
+    <p>Carlos</p>
+
+    <div>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere rerum id deserunt voluptate enim autem
+            aliquid possimus libero culpa amet? Natus quod facere incidunt quae omnis earum at. Corporis, incidunt?</p>
+    </div>
+
+    <p>Hola</p>
+    <script>
+
+        const parrafos = document.getElementsByTagName('p');
+        //Vais a recibir una lista Html del elementos cuasi un array
+        //console.log(parrafos);
+
+        parrafos[0].innerHTML = "<strong>Bienvenido</strong> a la bootcamp"
+        parrafos[1].innerText = "Hola como estas?"
+
+    </script>
+</body>
+
+</html>

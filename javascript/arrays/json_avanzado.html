@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Avanzado</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const alumno = {
+            nombre: 'Juan',
+            apellido: 'Pérez',
+            edad: 39,
+            genero: 'masculino',
+            matricula: 'A123456',
+            estado: false,
+            asignaturas: ['matematicas', 'lengua', 'quimica', 'ingles'],
+            notas: [3, 7, 5.5, 1],
+            datos: {
+                direccion: 'Calle Martinez Pollatos',
+                puerta: 5,
+                piso: 3,
+                cp: {
+                    ciudad: 'Madrid',
+                    codigo: 28023
+                }
+            },
+            mostrarNotaMedia: function () {
+                //getter
+                let suma = 0;
+                for (let nota of this.notas) {
+                    suma += nota;
+                }
+
+                return suma / this.notas.length
+            },
+            cambiarEdad: function (pNuevaEdad) {
+                //setter
+                this.edad = pNuevaEdad;
+            }
+
+        }
+
+        console.log(alumno.nombre); //Juan
+        console.log(alumno['genero']); //masculino
+
+        //asignaturas
+        console.log(alumno.asignaturas[1]); //lengua
+        console.log(alumno['asignaturas'][1]); //lengua
+
+        //datos de alumnno
+
+        console.log(alumno.datos.direccion); //calle Martinez Pollatos
+        console.log(alumno['datos']['puerta']); //5
+
+        console.log(`El alumno ${alumno.nombre} vive en la ${alumno.datos.direccion} y tiene ${alumno.edad} años`);
+
+        //ciudad 
+
+        console.log(alumno.datos.cp.ciudad);
+        console.log(alumno.datos.cp['ciudad']);
+
+        //nota media del alumno.
+
+        console.log(alumno.mostrarNotaMedia());
+
+    </script>
+</body>
+
+</html>
