@@ -27,4 +27,12 @@ misPoligonos.forEach((poligono, index) => {
     poligono.style.height = poligonos[index].height;
     poligono.style.borderRadius = poligonos[index].radio;
     poligono.style.border = poligonos[index].border;
+    poligono.style.transition = '1s';
 })
+
+function moverPoligono(pId, pPixeles) {
+    const poligonoAmover = document.getElementById(pId);
+    poligonoAmover.style.position = 'relative';
+    poligonoAmover.style.left = pPixeles + 'px';
+    console.log(poligonoAmover);
+}
