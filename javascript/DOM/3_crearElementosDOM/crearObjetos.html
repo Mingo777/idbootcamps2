@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear objetos del DOM</title>
+</head>
+
+<body>
+
+    <section id="frases">
+        <!-- <article>
+            <h3>'Solo se que no se nada'</h3>
+            <p>Autor: Descartes</p>
+            <hr>
+        </article> -->
+    </section>
+
+    <script>
+
+        const frases = new Array(
+            {
+                id: 1,
+                frase: 'Solo se que no se nada',
+                autor: 'Socrates'
+            },
+            {
+                id: 2,
+                frase: 'Yo no perteneceria a ningun club que me admitiera como socio',
+                autor: 'Marx'
+            },
+            {
+                id: 3,
+                frase: 'Eres un fristo pecadorrrrr',
+                autor: 'Chiquito de la calzada'
+            },
+        )
+
+        //capturamos de forma global los elementos del DOM con los que interactuamos.
+
+        const sectionFrases = document.querySelector('#frases');
+
+        //pintar las frases, siempre consiste en recorrer todas las frases e ir pintando frase a frase.
+
+        printSentences(frases, sectionFrases);
+
+        function printSentences(pList, pSection) {
+            pList.forEach(sentence => printOneSentence(sentence, pSection));
+        }
+
+        function printOneSentence(pSentence, pSection) {
+            //etiquetas
+            let article = document.createElement('article') // <article></article>
+            console.log(article);
+            let h3 = document.createElement('h3') // <h3></h3>
+            let p = document.createElement('p') //<p></p>
+            let hr = document.createElement('hr') //<hr/>
+
+            article.id = 'article_' + pSentence.id;
+            h3.style.color = "tomato";
+
+            //contenidos - creo los contenido y los tiro dentro de sus etiquetas
+            //opcion 1 - creando elementos
+            let contentH3 = document.createTextNode(pSentence.frase) // Solo se que no se nada
+            h3.appendChild(contentH3); //<h3>Solo se que no se nada</h3>
+
+            //opcion 2 - con innerText
+            //usando innerText me ahorro un paso
+            p.innerText = `Autor: ${pSentence.autor}`;
+
+            //tiro dentro del article todos sus elementos, ojo tienen que tirarse en orden
+            article.appendChild(h3); //<article><h3>Solo se que no se nada</h3></article>
+            article.appendChild(p); //<article><h3>Solo se que no se nada</h3><p>Autor: Socrates</p></article>
+            article.appendChild(hr);
+            //<article><h3>Solo se que no se nada</h3><p>Autor: Socrates</p><hr></article>
+
+            pSection.appendChild(article); //tiro a la seccion el article completo
+
+
+        }
+
+
+    </script>
+
+</body>
+
+</html>

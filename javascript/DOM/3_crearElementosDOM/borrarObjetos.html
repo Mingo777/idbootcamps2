@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <ul class="listaCompra"></ul>
+
+
+    <script>
+
+        const compra = new Array('Carne', 'Pescado', 'Leche', 'Judias', 'Tomates', 'Pan');
+        const sectionCompra = document.querySelector('.listaCompra');
+        let id = 0;
+
+        function printList(pList, pSection) {
+            pList.forEach(element => printOneElement(element, pSection));
+        }
+
+        function printOneElement(pElement, pSection) {
+            let li = document.createElement('li'); //<li></li>
+            li.id = 'item_' + id;
+            let contentLi = document.createTextNode(pElement); //Tomate
+            li.appendChild(contentLi); //<li>Tomate</li>
+
+            pSection.appendChild(li);
+            id++;
+        }
+
+        printList(compra, sectionCompra);
+
+        //borrar elementos del DOM con removeChild
+
+        function borrarItem(pNumli) {
+            const itemDelete = document.querySelector('#item_' + pNumli);
+            itemDelete.parentNode.removeChild(itemDelete);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso Clases DOM</title>
+
+    <style>
+        .cuadrado {
+            width: 100px;
+            height: 100px;
+            transition: 1s;
+        }
+
+        .red {
+            background-color: tomato;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        .blue {
+            background-color: blue;
+        }
+
+        .tamano {
+            width: 500px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="cuadrado red"></div>
+
+
+    <script>
+
+        const cuadrado = document.querySelector('.cuadrado');
+
+        //metodo antiguo className  --  usa la clase como una cadena de texto.
+
+        let textoClases = cuadrado.className;
+        console.log(textoClases); // cuadrado red
+
+        cuadrado.className = 'cuadrado green';
+
+        //metodo actual classList - es como un array de elementos de clase.
+        console.log(cuadrado); //objeto
+        console.log(cuadrado.classList); //array de elementos de clase
+
+        //error no se puede hacer por que son de solo lectura
+        // cuadrado.classList[1] = 'blue';
+        // console.log(cuadrado.classList[1]); //blue
+
+        //pero classList me ofrece una serie de metodo para trabajar con la lista de clases
+
+        //añado una clase
+        cuadrado.classList.add('tamano');
+
+        //borrar una clase del classList
+        cuadrado.classList.remove('tamano');
+
+        //cambiar una clase por otra cualquiera
+        cuadrado.classList.replace('green', 'blue');
+
+        //toggle, lo que hace es si existe la clase que pongo como parametro la borra, y si no existe la pone.
+
+        function cambiarClase() {
+            cuadrado.classList.toggle('tamano');
+        }
+
+
+    </script>
+</body>
+
+</html>

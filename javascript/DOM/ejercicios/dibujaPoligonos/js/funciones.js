@@ -28,6 +28,8 @@ misPoligonos.forEach((poligono, index) => {
     poligono.style.borderRadius = poligonos[index].radio;
     poligono.style.border = poligonos[index].border;
     poligono.style.transition = '1s';
+
+
 })
 
 function moverPoligono(pId, pPixeles) {

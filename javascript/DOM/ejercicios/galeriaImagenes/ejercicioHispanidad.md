@@ -10,6 +10,6 @@
 
     - el ejercicio debe pintar la imagen de la carpeta correspondiente en el tamaño estipulado en mi array. La imagen me la teneis que pintar sin deformar
     - Crear un metodo para pintar todas las imagenes
-    - Crea que me permita marcar cualquier imagen del la galeria con un borde rojo de 3px.
+    - Crear un metodo que permita marcar cualquier imagen del la galeria con un borde rojo de 3px.
 
 
