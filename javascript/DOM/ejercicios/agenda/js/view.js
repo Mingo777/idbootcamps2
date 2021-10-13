@@ -2,7 +2,7 @@
 
 let sectionLaboral = document.querySelector('.laboral div');
 let sectionPersonal = document.querySelector('.personal div');
-let id = 1;
+
 
 /*
 *   funcion printContacts para pintar toda la agenda
@@ -37,3 +37,20 @@ function printOneContact(pContact) {
 }
 
 printContacts(agenda);
+
+
+function deleteContact(pId) {
+
+    //con el pId vamos a borrar del array y si este borrado se produce correctamente borramos del interfaz
+    let result = deleteArray(pId, agenda); //true o false
+
+    if (result) {
+        //borro graficamente
+        let articleBorrar = document.querySelector('#article_' + pId);
+        articleBorrar.parentNode.removeChild(articleBorrar);
+    }
+    else {
+        alert('No se pudo borrar el registro, intentelo de nuevo');
+    }
+}
+
