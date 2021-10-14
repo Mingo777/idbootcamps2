@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos injectados</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li id="blue" onclick="cambiarColor(this)">Azul</li>
+        <li id="red" onclick="cambiarColor(this)">Rojo</li>
+        <li id="green" onclick="cambiarColor(this)">Verde</li>
+        <li id="gold" onclick="cambiarColor(this)">Yellow</li>
+    </ul>
+
+    <script>
+
+
+        function cambiarColor(pDom) {
+            console.log(pDom.id);
+            console.log(pDom.innerText)
+            document.body.style.backgroundColor = pDom.id;
+            pDom.style.marginLeft = '200px';
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

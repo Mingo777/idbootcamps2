@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos listener</title>
+    <style>
+        li {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul id="menu">
+        <li id="blue">Azul</li>
+        <li id="red">Rojo</li>
+        <li id="green">Verde</li>
+        <li id="gold">Yellow</li>
+    </ul>
+
+    <script>
+
+        const enlaces = document.querySelectorAll('#menu li');
+
+        enlaces.forEach(enlace => enlace.addEventListener('click', cambiarColor))
+
+        function cambiarColor(event) {
+            document.body.style.backgroundColor = event.target.id; //this de los eventos injectados
+        }
+
+
+    </script>
+
+</body>
+
+</html>

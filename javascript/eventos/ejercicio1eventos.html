@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .coche {
+            width: 200px;
+            transform: rotateZ(180deg);
+            transition: margin-left 0.5s, margin-top 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <button data-velocidad='-20' onclick="moverHorizontal(this)">IZQUIERDA</button>
+    <button data-velocidad='-20' class="listeners">ARRIBA</button>
+    <button data-velocidad='20' class="listeners">ABAJO</button>
+    <button data-velocidad='20' onclick="moverHorizontal(this)">DERECHA</button>
+    <hr>
+    <div class="coche">
+        <img src="https://www.deividart.com/libres/zycars-coche_camaro-2.png">
+    </div>
+
+
+    <script>
+
+        const coche = document.querySelector('.coche');
+        let posicionX = 0;
+        let posicionY = 0;
+
+        //eventos injectados
+        function moverHorizontal(pButton) {
+
+            let velocidad = parseInt(pButton.dataset.velocidad);
+            let grados = (pButton.innerText === 'DERECHA') ? 180 : 0;
+
+            posicionX += velocidad;
+
+            coche.style.marginLeft = posicionX + 'px';
+            coche.style.transform = `rotateZ(${grados}deg)`;
+        }
+
+        //eventos con listeners
+        const botones = document.querySelectorAll('.listeners');
+        botones.forEach(boton => boton.addEventListener('click', moverVertical));
+
+        function moverVertical(event) {
+            let velocidad = parseInt(event.target.dataset.velocidad);
+            posicionY += velocidad;
+
+            let grados = (event.target.innerText === 'ARRIBA') ? 90 : 270;
+            coche.style.marginTop = posicionY + 'px';
+            coche.style.transform = `rotateZ(${grados}deg)`;
+        }
+
+    </script>
+</body>
+
+</html>
