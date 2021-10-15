@@ -1,6 +1,6 @@
 ## ejercicio hospital
 
-     - crear un listado de 15 pacientes con los sigui entes datos
+     - crear un listado de 15 pacientes con los siguientes datos
         - nombre, apellido, edad, diagnostico, numeroSS
 
     - Crear un interfaz que pinte todos los pacientes y me diga cuantos pacientes hay en el hospital

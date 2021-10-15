@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital la Princesa</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modelo.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h3>Buscador por edad</h3>
+            <form action="">
+                <label for="edadmin">Edad Minima</label>
+                <input type="number" id="edadmin">
+                <label for="edadmax">Edad Maxima</label>
+                <input type="number" id="edadmax">
+                <input type="submit" value="filtrar">
+            </form>
+        </div>
+
+        <div>
+            <h3>Buscador semantico</h3>
+            <input type="text" placeholder="introduce nombre o apellido a buscar">
+        </div>
+
+        <div>
+            <h3>Buscador por diagnostico</h3>
+            <select id="diagnostico">
+                <option value="" selected>Selecciona un diagnostico</option>
+            </select>
+        </div>
+
+    </header>
+    <main>
+        <div class="numpacientes">
+            12
+        </div>
+
+        <section id="pacientes">
+            <h2>Listado de pacientes</h2>
+            <div>
+                <article>
+                    <h3>Nombre y apellidos</h3>
+                    <ul>
+                        <li>Edad: 39</li>
+                        <li>Seguridad Social: A234567</li>
+                    </ul>
+                    <p>GRIPE</p>
+                </article>
+                <article>
+                    <h3>Nombre y apellidos</h3>
+                    <ul>
+                        <li>Edad: 39</li>
+                        <li>Seguridad Social: A234567</li>
+                    </ul>
+                    <p>GRIPE</p>
+                </article>
+                <article>
+                    <h3>Nombre y apellidos</h3>
+                    <ul>
+                        <li>Edad: 39</li>
+                        <li>Seguridad Social: A234567</li>
+                    </ul>
+                    <p>GRIPE</p>
+                </article>
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+
+    <script src="js/controller.js"></script>
+    <script src="js/view.js"></script>
+</body>
+
+</html>
