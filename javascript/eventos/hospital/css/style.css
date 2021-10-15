@@ -72,3 +72,13 @@ main #pacientes div article p {
     background-color: tomato;
     padding: 5px;
 }
+
+@media (max-width: 500px) {
+    main #pacientes div article {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+    header input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    width: 100%;
+}
+
+header select {
+    padding: 5px;
+    margin: 10px;
+}
+
+hr {
+    margin: 20px 0px;
+}
+
+#bypartido {
+    margin: 20px;
+}
+
+#bypartido>div {
+    margin: 20px;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+#bypartido>.anios {
+    height: auto;
+    justify-content: space-between;
+}
+
+#bypartido>div>div {
+    position: relative;
+    height: 100%;
+}
+
+.iu {
+    background-color: tomato;
+}
+
+.pp {
+    background-color: blue;
+}
+
+.psoe {
+    background-color: red;
+}
+
+.podemos {
+    background-color: blueviolet;
+}
+
+.vox {
+    background-color: darkgreen;
+}
+
+.ciudadanos {
+    background-color: orange;
+}
+
+.masmadrid {
+    background-color: lightgreen;
+}
+
+.otros {
+    background-color: lightgrey;
+}
+
+#byyear {
+    margin: 20px;
+}
+
+#byyear div {
+    width: 100%;
+    height: 40px;
+    margin: 10px;
+}

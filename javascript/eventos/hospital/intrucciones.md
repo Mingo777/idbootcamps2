@@ -5,11 +5,11 @@
 
     - Crear un interfaz que pinte todos los pacientes y me diga cuantos pacientes hay en el hospital
 
-    - Dentro del interfaz teneis que crear un par de inputs con la edad minima y edad maxima y un boton de filtrar. Cuando deis a filtrar el listado de pacientes se refrescará en el interfaz con la lista de pacientes con ese rango de edad.
+    - Dentro del interfaz teneis que crear un par de inputs con la edad minima y edad maxima y un boton de filtrar. Cuando deis a filtrar el listado de pacientes se refrescará en el interfaz con la lista de pacientes con ese rango de edad. //DOS PARTES filtrar y recoger datos
 
     - Buscador por nombre y apellido. Input de tipo texto que cuando le demos a buscar me encuentre todos los nombres o apellidos que tenga en esa busqueda.
 
 
-    - filtrar por diagnostico
+    - filtrar por diagnostico (TRES COSAS - filtrar y recoger datos, llenar el select con diagnosticos del array)
     - filtrar por numeroSS
 
