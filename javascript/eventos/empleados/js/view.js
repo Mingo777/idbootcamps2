@@ -38,8 +38,16 @@ function printOneEmployee(pEmployee, pSection) {
 
 
 function deleteEmployee(event) {
-    alert(event.target.dataset.id)
-    //agenda
+    let result = deleteArray(parseInt(event.target.dataset.id), empleados)
+    if (result) {
+        //borrar del interfaz
+        let deleteArticle = document.querySelector('#employee_' + event.target.dataset.id);
+
+        deleteArticle.parentNode.removeChild(deleteArticle);
+        return false;
+    }
+
+    alert('No se ha podido borrar el usuario');
 }
 
 
@@ -58,21 +66,36 @@ btnSave.addEventListener('click', getDataForm)
 
 function getDataForm(event) {
     event.preventDefault();
-
+    let result;
     const newEmployee = {
-        id: id,
-        name: inputName.value,
-        email: inputEmail.value,
-        salary: Number(inputSalary.value)
+        id: 0,
+        name: "",
+        email: "",
+        salary: 0
+    }
+
+    if (inputName.value !== "" && inputEmail.value !== "" && inputSalary.value !== "") {
+
+        newEmployee.id = id;
+        newEmployee.name = inputName.value;
+        newEmployee.email = inputEmail.value;
+        newEmployee.salary = Number(inputSalary.value);
+
+        result = saveEmployee(newEmployee, empleados)
+    } else {
+        alert('Todos los campos son obligatorios')
     }
 
     //guarda este objeto en el array y posteriormente pintar.
-    let result = saveEmployee(newEmployee, empleados)
+
     if (result) {
         printOneEmployee(newEmployee, sectionEmployees);
         id++;
     } else {
-        alert('El empleado no se ha podido guardar, intentelo de nuevo mas tarde');
+        alert('El empleado no se ha podido guardar, puede estar duplicado, intentelo de nuevo mas tarde o introduzca otros datos');
     }
 
+    inputName.value = "";
+    inputEmail.value = "";
+    inputSalary.value = "";
 }

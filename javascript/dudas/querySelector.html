@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUERYSELECTOR</title>
+</head>
+
+<body>
+
+    <section class="productos">
+        <article>
+            <h3></h3>
+        </article>
+        <article>
+            <h3></h3>
+        </article>
+    </section>
+
+    <h3></h3>
+
+    <script>
+
+        //primer elemento con querySelector
+        let primerH3deProductos = document.querySelector('.productos article h3') //un objeto del DOM directamente
+        primerH3deProductos.innerText = "Hola desde el primer h3";
+
+        //todos los elementos NodeList -> foreach
+
+        let h3s = document.querySelectorAll('.productos article h3')
+        console.log(h3s);
+
+
+
+    </script>
+</body>
+
+</html>

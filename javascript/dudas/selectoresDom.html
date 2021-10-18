@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>
+        <p class="pepe"></p>
+        <p></p>
+    </div>
+
+    <p></p>
+
+    <div id="ultimo" class="pepe"></div>
+    <script>
+        //getElementsByTagName
+
+        let parrafos = document.getElementsByTagName('p'); //3p HTMLCOllection
+        parrafos[1].innerText = "Jorge";
+
+        //getElementsByClassName
+
+        let elementos = document.getElementsByClassName('pepe'); //3items HTMLCollection
+        console.log(elementos);
+
+        //getElementById 
+
+        let ultimodiv = document.getElementById('ultimo');
+
+
+        //variante accedo primero al primer div y de ahi a sus p's y solo a sus p's.
+
+        let divs = document.getElementsByTagName('div');
+        let miDiv = divs[0];
+        let misParrafos = miDiv.getElementsByTagName('p'); //2p HTMLCollection
+        console.log(misParrafos);
+    </script>
+</body>
+
+</html>

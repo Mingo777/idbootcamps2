@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For of</title>
+</head>
+
+<body>
+
+    <script>
+
+        //el for of es un metodo para recorrer array sin necesidad de conocer la posicion del elemento, sirve para cualquier tipo de array.
+
+        const cryptos = new Array(
+            {
+                name: 'Bitcoin',
+                price: 61000
+            },
+            {
+                name: 'Arkano',
+                price: 1500
+            },
+            {
+                name: 'Etherium',
+                price: 3400
+            },
+            {
+                name: 'DodgeCoin',
+                price: 0.4
+            }
+        )
+
+        for (let coin of cryptos) {
+            console.log(coin.name)
+        }
+
+
+        //for es para superficies no iterables.
+
+        const producto = {
+            name: 'Leche',
+            precio: 0.56,
+            stock: true
+        }
+
+        for (let key in producto) {
+            if (key === 'precio') {
+                console.log(producto[key]);
+                break;
+            }
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

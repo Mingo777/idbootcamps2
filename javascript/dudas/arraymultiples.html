@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array multiples</title>
+</head>
+
+<body>
+
+    <script>
+
+        const compra = new Array(
+            new Array('Pollo', 'Ternera', 'Pescado'),
+            new Array('Brocoli', 'Lechuga', 'Calabacin'),
+            new Array('Pan', 'Cereales', 'Huevos')
+        )
+
+        console.log(compra[1][1]);
+
+        for (let i = 0; i < compra.length; i++) {
+            for (let j = 0; j < compra[i].length; j++) {
+                document.write(compra[i][j] + '<br>');
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>
