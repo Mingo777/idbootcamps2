@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestiona cookies</title>
+</head>
+
+<body>
+
+    <h1>Ducatti</h1>
+    <h2>Monster</h2>
+
+    <button id="btn">ACEPTO COOKIES</button>
+    <button id="btn2">LEER COOKIES</button>
+
+
+    <script>
+
+        let btn = document.querySelector('#btn');
+        btn.addEventListener('click', aceptarCookies);
+
+        function aceptarCookies(event) {
+
+            let producto = document.querySelector('h1').innerText;
+            let modelo = document.querySelector('h2').innerText;
+
+            //para crear un cookie trabajamos desde el documento y solo podemos almacenar texto.
+            document.cookie = "marca=" + producto;
+            document.cookie = 'modelo=' + modelo;
+            document.cookie = 'tipo=naked';
+            alert(document.cookie);
+        }
+
+        //leer cookies
+
+        let btn2 = document.querySelector('#btn2');
+        btn2.addEventListener('click', recogerCookies);
+
+        function recogerCookies() {
+            let cookies = document.cookie;
+            //console.log(cookies);
+
+            //partir la cadena de caracteres con split usando el punto y coma
+
+            let arrCookies = cookies.split('; ');
+
+            let modelo = arrCookies.find(cookie => cookie.includes('modelo'));
+            modelo = modelo.split('=')[1];
+
+            document.write('te gusta el modelo ' + modelo);
+        }
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

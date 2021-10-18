@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localstorage - guardar información</title>
+</head>
+
+<body>
+
+    <a href="localstorage2.html">Ir a otra seccion</a>
+
+    <article>
+        <h3>Macbook pro</h3>
+        <img src="https://i.blogs.es/58787e/macbook2/450_1000.jpeg" alt="macbookpro">
+        <button id="btn">Me gusta</button>
+    </article>
+
+
+    <script>
+
+        const tituloProducto = document.querySelector('h3').innerText;
+        const precio = 2900;
+        const producto = {
+            title: 'Macbook pro',
+            price: 3000,
+            ram: 16,
+            core: 'M1X'
+        }
+
+
+        //para guardar esta info en localstorage doy al boton de me gusta.
+
+        let btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', saveLocalStorage);
+
+        function saveLocalStorage(event) {
+            localStorage.setItem('title', tituloProducto);
+            localStorage.setItem('price', precio); //localStorage me va a convertir el dato en string
+
+            //esto es el mismo proceso para JSON que para ARRAYS.
+            localStorage.setItem('product', JSON.stringify(producto))
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

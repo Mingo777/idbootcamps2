@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage 2 - leer informacion de localstorage</title>
+</head>
+
+<body>
+
+    <a href="localstorage3.html">Borrar Localstorage</a>
+    <h1>Otra sección</h1>
+
+    <p id="producto"></p>
+
+    <article></article>
+    <script>
+
+
+        //voy a acceder al localstorage y recoger la informacion y pintarla - getItem(clave)
+
+        let titulo = localStorage.getItem('title');
+        let precio = localStorage.getItem('price');
+        let producto = JSON.parse(localStorage.getItem('product'));
+
+
+        console.log(titulo);
+        console.log(precio)
+        console.log(producto)
+
+        let productoHTML = document.querySelector('#producto');
+        productoHTML.innerHTML = titulo + ": precio " + precio + "€";
+
+        let article = document.querySelector('article');
+        article.innerHTML = `<h3>${producto.title}</h3>
+                            <ul>
+                                <li>Precio: ${producto.price}</li>
+                                <li>RAM: ${producto.ram}</li>
+                                <li>Procesador: ${producto.core}</li>
+                            </ul>
+                            `
+
+
+
+    </script>
+
+</body>
+
+</html>
