@@ -1,442 +1,402 @@
-[
+const elecciones = [
     {
-        "Año": "1987",
-        "Candidatura": "iu",
-        "Votos": "181.512"
+        "year": "1987",
+        "candidatura": "iu",
+        "votos": "181.512"
     },
     {
-        "Año": "1987",
-        "Candidatura": "pp",
-        "Votos": "762.102"
+        "year": "1987",
+        "candidatura": "pp",
+        "votos": "762.102"
     },
     {
-        "Año": "1987",
-        "Candidatura": "psoe",
-        "Votos": "932.878"
+        "year": "1987",
+        "candidatura": "psoe",
+        "votos": "932.878"
     },
     {
-        "Año": "1987",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "1987",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "1987",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "1987",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "1987",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "1987",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "1987",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "1987",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "1987",
-        "Candidatura": "otros",
-        "Votos": "507.784"
+        "year": "1987",
+        "candidatura": "otros",
+        "votos": "507.784"
     },
     {
-        "Año": "1991",
-        "Candidatura": "iu",
-        "Votos": "270.558"
+        "year": "1991",
+        "candidatura": "iu",
+        "votos": "270.558"
     },
     {
-        "Año": "1991",
-        "Candidatura": "pp",
-        "Votos": "956.865"
+        "year": "1991",
+        "candidatura": "pp",
+        "votos": "956.865"
     },
     {
-        "Año": "1991",
-        "Candidatura": "psoe",
-        "Votos": "820.510"
+        "year": "1991",
+        "candidatura": "psoe",
+        "votos": "820.510"
     },
     {
-        "Año": "1991",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "1991",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "1991",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "1991",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "1991",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "1991",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "1991",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "1991",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "1991",
-        "Candidatura": "otros",
-        "Votos": "165.539"
+        "year": "1991",
+        "candidatura": "otros",
+        "votos": "165.539"
     },
     {
-        "Año": "1995",
-        "Candidatura": "iu",
-        "Votos": "464.167"
+        "year": "1995",
+        "candidatura": "iu",
+        "votos": "464.167"
     },
     {
-        "Año": "1995",
-        "Candidatura": "pp",
-        "Votos": "1.476.442"
+        "year": "1995",
+        "candidatura": "pp",
+        "votos": "1.476.442"
     },
     {
-        "Año": "1995",
-        "Candidatura": "psoe",
-        "Votos": "860.726"
+        "year": "1995",
+        "candidatura": "psoe",
+        "votos": "860.726"
     },
     {
-        "Año": "1995",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "1995",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "1995",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "1995",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "1995",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "1995",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "1995",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "1995",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "1995",
-        "Candidatura": "otros",
-        "Votos": "56.019"
+        "year": "1995",
+        "candidatura": "otros",
+        "votos": "56.019"
     },
     {
-        "Año": "1999",
-        "Candidatura": "iu",
-        "Votos": "199.488"
+        "year": "1999",
+        "candidatura": "iu",
+        "votos": "199.488"
     },
     {
-        "Año": "1999",
-        "Candidatura": "pp",
-        "Votos": "1.324.596"
+        "year": "1999",
+        "candidatura": "pp",
+        "votos": "1.324.596"
     },
     {
-        "Año": "1999",
-        "Candidatura": "psoe",
-        "Votos": "944.819"
+        "year": "1999",
+        "candidatura": "psoe",
+        "votos": "944.819"
     },
     {
-        "Año": "1999",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "1999",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "1999",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "1999",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "1999",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "1999",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "1999",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "1999",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "1999",
-        "Candidatura": "otros",
-        "Votos": "70.251"
+        "year": "1999",
+        "candidatura": "otros",
+        "votos": "70.251"
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "iu",
-        "Votos": "235.428"
+        "year": "2003",
+        "candidatura": "iu",
+        "votos": "236.013"
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "pp",
-        "Votos": "1.429.890"
+        "year": "2003",
+        "candidatura": "pp",
+        "votos": "1.346.588"
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "psoe",
-        "Votos": "1.225.390"
+        "year": "2003",
+        "candidatura": "psoe",
+        "votos": "1.083.205"
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "2003",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "2003",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "2003",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "2003",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "2003(1)",
-        "Candidatura": "otros",
-        "Votos": "112.430"
+        "year": "2003",
+        "candidatura": "otros",
+        "votos": "63.383"
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "iu",
-        "Votos": "236.013"
+        "year": "2007",
+        "candidatura": "iu",
+        "votos": "264.782"
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "pp",
-        "Votos": "1.346.588"
+        "year": "2007",
+        "candidatura": "pp",
+        "votos": "1.592.162"
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "psoe",
-        "Votos": "1.083.205"
+        "year": "2007",
+        "candidatura": "psoe",
+        "votos": "1.002.862"
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "2007",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "2007",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "2007",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "2007",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "2003(2)",
-        "Candidatura": "otros",
-        "Votos": "63.383"
+        "year": "2007",
+        "candidatura": "otros",
+        "votos": "76.275"
     },
     {
-        "Año": "2007",
-        "Candidatura": "iu",
-        "Votos": "264.782"
+        "year": "2011",
+        "candidatura": "iu",
+        "votos": "287.707"
     },
     {
-        "Año": "2007",
-        "Candidatura": "pp",
-        "Votos": "1.592.162"
+        "year": "2011",
+        "candidatura": "pp",
+        "votos": "1.548.306"
     },
     {
-        "Año": "2007",
-        "Candidatura": "psoe",
-        "Votos": "1.002.862"
+        "year": "2011",
+        "candidatura": "psoe",
+        "votos": "786.297"
     },
     {
-        "Año": "2007",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "2011",
+        "candidatura": "podemos",
+        "votos": ""
     },
     {
-        "Año": "2007",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "2011",
+        "candidatura": "ciudadanos",
+        "votos": ""
     },
     {
-        "Año": "2007",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "2011",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "2007",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "2011",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "2007",
-        "Candidatura": "otros",
-        "Votos": "76.275"
+        "year": "2011",
+        "candidatura": "otros",
+        "votos": "110.412"
     },
     {
-        "Año": "2011",
-        "Candidatura": "iu",
-        "Votos": "287.707"
+        "year": "2015",
+        "candidatura": "iu",
+        "votos": "132.207"
     },
     {
-        "Año": "2011",
-        "Candidatura": "pp",
-        "Votos": "1.548.306"
+        "year": "2015",
+        "candidatura": "pp",
+        "votos": "1.050.256"
     },
     {
-        "Año": "2011",
-        "Candidatura": "psoe",
-        "Votos": "786.297"
+        "year": "2015",
+        "candidatura": "psoe",
+        "votos": "807.385"
     },
     {
-        "Año": "2011",
-        "Candidatura": "podemos",
-        "Votos": ""
+        "year": "2015",
+        "candidatura": "podemos",
+        "votos": "591.697"
     },
     {
-        "Año": "2011",
-        "Candidatura": "ciudadanos",
-        "Votos": ""
+        "year": "2015",
+        "candidatura": "ciudadanos",
+        "votos": "385.836"
     },
     {
-        "Año": "2011",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "2015",
+        "candidatura": "masmadrid",
+        "votos": ""
     },
     {
-        "Año": "2011",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "2015",
+        "candidatura": "vox",
+        "votos": ""
     },
     {
-        "Año": "2011",
-        "Candidatura": "otros",
-        "Votos": "110.412"
+        "year": "2015",
+        "candidatura": "otros",
+        "votos": "107.834"
     },
     {
-        "Año": "2015",
-        "Candidatura": "iu",
-        "Votos": "132.207"
+        "year": "2019",
+        "candidatura": "iu",
+        "votos": ""
     },
     {
-        "Año": "2015",
-        "Candidatura": "pp",
-        "Votos": "1.050.256"
+        "year": "2019",
+        "candidatura": "pp",
+        "votos": "719.852"
     },
     {
-        "Año": "2015",
-        "Candidatura": "psoe",
-        "Votos": "807.385"
+        "year": "2019",
+        "candidatura": "psoe",
+        "votos": "884.218"
     },
     {
-        "Año": "2015",
-        "Candidatura": "podemos",
-        "Votos": "591.697"
+        "year": "2019",
+        "candidatura": "podemos",
+        "votos": "181.231"
     },
     {
-        "Año": "2015",
-        "Candidatura": "ciudadanos",
-        "Votos": "385.836"
+        "year": "2019",
+        "candidatura": "ciudadanos",
+        "votos": "629.940"
     },
     {
-        "Año": "2015",
-        "Candidatura": "masmadrid",
-        "Votos": ""
+        "year": "2019",
+        "candidatura": "masmadrid",
+        "votos": "475.672"
     },
     {
-        "Año": "2015",
-        "Candidatura": "vox",
-        "Votos": ""
+        "year": "2019",
+        "candidatura": "vox",
+        "votos": "287.667"
     },
     {
-        "Año": "2015",
-        "Candidatura": "otros",
-        "Votos": "107.834"
+        "year": "2019",
+        "candidatura": "otros",
+        "votos": "44.259"
     },
     {
-        "Año": "2019",
-        "Candidatura": "iu",
-        "Votos": ""
+        "year": "2021",
+        "candidatura": "iu",
+        "votos": ""
     },
     {
-        "Año": "2019",
-        "Candidatura": "pp",
-        "Votos": "719.852"
+        "year": "2021",
+        "candidatura": "pp",
+        "votos": "1.620.213"
     },
     {
-        "Año": "2019",
-        "Candidatura": "psoe",
-        "Votos": "884.218"
+        "year": "2021",
+        "candidatura": "psoe",
+        "votos": "610.190"
     },
     {
-        "Año": "2019",
-        "Candidatura": "podemos",
-        "Votos": "181.231"
+        "year": "2021",
+        "candidatura": "podemos",
+        "votos": "261.010"
     },
     {
-        "Año": "2019",
-        "Candidatura": "ciudadanos",
-        "Votos": "629.940"
+        "year": "2021",
+        "candidatura": "ciudadanos",
+        "votos": "129.216"
     },
     {
-        "Año": "2019",
-        "Candidatura": "masmadrid",
-        "Votos": "475.672"
+        "year": "2021",
+        "candidatura": "masmadrid",
+        "votos": "614.660"
     },
     {
-        "Año": "2019",
-        "Candidatura": "vox",
-        "Votos": "287.667"
+        "year": "2021",
+        "candidatura": "vox",
+        "votos": "330.660"
     },
     {
-        "Año": "2019",
-        "Candidatura": "otros",
-        "Votos": "44.259"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "iu",
-        "Votos": ""
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "pp",
-        "Votos": "1.620.213"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "psoe",
-        "Votos": "610.190"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "podemos",
-        "Votos": "261.010"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "ciudadanos",
-        "Votos": "129.216"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "masmadrid",
-        "Votos": "614.660"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "vox",
-        "Votos": "330.660"
-    },
-    {
-        "Año": "2021",
-        "Candidatura": "otros",
-        "Votos": "37.228"
+        "year": "2021",
+        "candidatura": "otros",
+        "votos": "37.228"
     }
 ]
