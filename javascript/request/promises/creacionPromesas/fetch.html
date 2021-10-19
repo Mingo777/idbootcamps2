@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch libreria nativa que me permite hacer peticiones asincronas a las api.</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        const url = 'https://jsonplaceholder.typicode.com/users';
+
+        //OPCION 1: FECTH GESTIONADO POR THEN CATCH
+        fetch(url, { method: 'GET' })
+            .then(response => {
+                response.json()
+                    .then(result => console.log(result));
+            })
+            .catch(error => console.log(error))
+
+
+        //OPCION 2: ASYNC AWAIT
+
+        async function cargarDatos() {
+            let response = await fetch(url, { method: 'GET' });
+            let result = await response.json()
+            console.log(result);
+        }
+
+        cargarDatos();
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    max-width: 600px;
+    background-color: black;
+    padding: 20px;
+    height: auto;
+}
+
+header .logo {
+    border-bottom: 2px solid white;
+    margin-bottom: 20px;
+}
+
+header #personajes li {
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+header #personajes li:hover {
+    background-color: #ffe919;
+    color: black;
+}
+
+header .botones {
+    display: flex;
+    margin-top: 20px;
+}
+
+header .botones div {
+    border: 1px solid #ffe919;
+    color: #ffe919;
+    width: 100%;
+    padding: 10px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+header .botones div:hover {
+    background-color: #ffe919;
+    color: black;
+}
+
+header .botones div:last-child {
+    text-align: right;
+}
+
+main {
+    padding: 20px;
+}
+
+main #vistaPersonaje {
+    padding: 20px;
+    border: 1px solid black;
+}
+
+main h2 {
+    margin: 20px 0;
+    text-decoration: underline;
+}
+
+main #vistaPersonaje .peliculas {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main #vistaPersonaje .peliculas article {
+    background-color: black;
+    border: 2px solid #ffe919;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    width: calc(100% - 40px);
+}
+
+main #vistaPersonaje .peliculas article h3 {
+    color: #ffe919;
+}
+
+/* vamos hacer dos breakpoint 600px y 960px */
+
+@media(min-width: 600px) {
+    header {
+        max-width: 425px;
+        height: 100vh;
+    }
+    main {
+        width: calc(100vw - 425px);
+        height: auto;
+    }
+}
+
+@media(min-width: 960px) {
+    main #vistaPersonaje .peliculas article {
+        width: calc(33.333% - 40px);
+    }
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de promesas 2</title>
+</head>
+
+<body>
+
+    <span id="descuento"></span>
+
+
+    <script>
+        const spanDescuento = document.querySelector('#descuento');
+
+        function pintarDescuento(pDescuentoMax) {
+
+            const aplicarDescuento = new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    let descuento = Math.trunc(Math.random() * 101);
+                    console.log(descuento);
+                    if (descuento <= pDescuentoMax) {
+                        resolve('descuento aplicado: ' + descuento + '%')
+                    } else {
+                        reject('No tiene descuento')
+                    }
+                }, 3000);
+            })
+
+
+            return aplicarDescuento;
+        }
+
+        pintarDescuento(30)
+            .then(pDescuento => {
+                console.log(pDescuento)
+                spanDescuento.innerText = pDescuento
+            })
+            .catch(pError => console.log(pError))
+
+
+    </script>
+
+
+
+</body>
+
+</html>

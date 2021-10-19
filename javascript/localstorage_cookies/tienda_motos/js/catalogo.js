@@ -1,6 +1,18 @@
 const cart = document.querySelector('#numcarrito');
 const sectionProducts = document.querySelector('#productos');
-const carrito = new Array();
+let carrito = new Array();
+
+//siempre que cargao el script compruebo si hay elementos en el localstorage, si hay elementos cojo la longitud y la pongo como numero total del elementos del carrito y si no muestro 0
+
+if (localStorage.getItem('carrito') !== null) {
+    carrito = JSON.parse(localStorage.getItem('carrito'))
+    cart.innerText = carrito.length;
+} else {
+    cart.innerText = 0;
+}
+
+
+
 
 function printAllProducts(pListProducts, pSectionProducts) {
     pSectionProducts.innerHTML = "";
@@ -37,5 +49,6 @@ function addCarrito(event) {
     carrito.push(productoSeleccionado);
 
     localStorage.setItem('carrito', JSON.stringify(carrito));
+    cart.innerText = carrito.length;
 
 }
