@@ -1,0 +1,150 @@
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Rasa:wght@300;500&display=swap");
+:root {
+  --mainFont: "Rasa", serif;
+  --titleSize: 3em;
+  --mainColor: #414141;
+  --secondColor: #c9c9c9;
+  --maxwidth: 1400px;
+  --space: 20px;
+  --colorBuy: #eeeeee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: grayscale(100%);
+  transition: 0.5s;
+}
+
+img:hover {
+  filter: grayscale(0%);
+}
+
+.container {
+  max-width: var(--maxwidth);
+  margin: 0 auto;
+}
+
+body {
+  font-family: var(--mainFont);
+  font-weight: 300;
+  color: var(--mainColor);
+  font-size: 16px;
+}
+
+main h2 {
+  font-size: var(--titleSize);
+  margin-bottom: calc(var(--space) * 2);
+}
+
+main section .container {
+  padding: calc(var(--space) * 4) var(--space);
+}
+
+@media (min-width: 768px) {
+  main h2 {
+    font-size: calc(var(--titleSize));
+  }
+}
+
+/* about */
+
+main #team h2 {
+  text-align: center;
+}
+
+main #team article>div {
+  overflow: hidden;
+  -webkit-clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+  transition: 1s;
+  margin: 0 auto;
+}
+
+main #team article h3 {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+main #team article p {
+  color: var(--secondColor);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+main #team article>div:hover {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+main #team .container>p {
+  text-align: center;
+  font-size: 2em;
+  padding: 100px;
+  background-color: #fafafa;
+}
+
+main #team .container>p a {
+  text-decoration: none;
+  border-bottom: 1px solid var(--secondColor);
+  color: var(--mainColor);
+}
+
+main #team #submenu {
+  display: flex;
+}
+
+main #team #submenu li {
+  font-size: 2em;
+  color: var(--secondColor);
+  text-align: center;
+  cursor: pointer;
+  padding: 20px;
+}
+
+main #team #submenu li:hover {
+  color: var(--mainColor);
+}
+
+main #team #submenu .active {
+  color: var(--mainColor);
+}
+
+@media (min-width: 768px) {
+  main #team h2 {
+    text-align: left;
+  }
+  main #team article>div {
+    margin: 0px;
+  }
+  main #team .container>div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  main #team .container>div article {
+    width: 50%;
+  }
+  main #team .container>div h3 {
+    margin-top: 50px;
+  }
+  main #team .container>div h3, main #team .container>div p {
+    text-align: center;
+  }
+}
+
+@media (min-width: 960px) {
+  main #team .container>div {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  main #team .container>div article {
+    width: 33.333%;
+  }
+}
