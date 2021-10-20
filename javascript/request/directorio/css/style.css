@@ -148,3 +148,58 @@ main #team #submenu .active {
     width: 33.333%;
   }
 }
+
+/* lightbox */
+
+#viewUser {
+  font-family: var(--mainFont);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+#viewUser .manto {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#viewUser .manto .card {
+  width: 50%;
+  margin: 0 auto;
+  background-color: white;
+  position: relative;
+  top: 20%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#viewUser .manto .card figure {
+  width: 50%;
+}
+
+#viewUser .manto .card aside {
+  width: 50%;
+  padding: 20px;
+}
+
+#viewUser .manto .card img {
+  width: 100%;
+  height: auto;
+}
+
+#viewUser .manto .card p {
+  padding: 5px 7px;
+  text-align: center;
+  background-color: black;
+  border: 2px solid white;
+  color: white;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
