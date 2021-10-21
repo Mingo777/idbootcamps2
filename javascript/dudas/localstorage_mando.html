@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">GUARDAR DATOS</button>
+    <script>
+
+        const datos = new Array(
+            {
+                id: 1,
+                name: 'Carlos',
+                edad: 29
+            },
+            {
+                id: 2,
+                name: 'Jorge',
+                edad: 30
+            },
+            {
+                id: 3,
+                name: 'Natalia',
+                edad: 24
+            },
+            {
+                id: 4,
+                name: 'Jose',
+                edad: 30
+            },
+        )
+
+        const btn = document.querySelector('#btn');
+
+        btn.addEventListener('click', guardarDatos)
+
+        function guardarDatos(event) {
+            localStorage.setItem('datos', JSON.stringify(datos))
+        }
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de promesas</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        function cargarPromesa() {
+            const miPeticion = new Promise((resolve, reject) => {
+                const url = 'https://reqres.in/api/users';
+                const peticion = new XMLHttpRequest();
+                peticion.open('GET', url, true)
+                peticion.send()
+                peticion.addEventListener('load', (event) => {
+                    if (event.target.status === 200) {
+                        resolve(event.target.responseText);
+                    } else {
+                        reject('No he podido conectar a la API')
+                    }
+                })
+            })
+            return miPeticion;
+        }
+
+
+        //opcion 1 then catch
+
+        /*  cargarPromesa()
+             .then((paqueteString) => {
+ 
+                 let result = JSON.parse(paqueteString);
+                 console.log(result);
+ 
+             })
+             .catch((string) => { console.log(string) }) */
+
+
+        //opcion 2
+
+        async function cargarContenido() {
+            const result = await cargarPromesa();
+            const data = JSON.parse(result);
+            console.log(data.data);
+        }
+
+        cargarContenido()
+
+
+
+
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animaciones gestionadas por js</title>
+
+    <style>
+        #cuadrado {
+            width: 100px;
+            height: 100px;
+            background-color: black;
+            position: absolute;
+            transition: 1s;
+            top: 60px;
+            left: 40px;
+        }
+
+        .circulo {
+            border-radius: 50%;
+        }
+
+        .darUnaVuelta {
+            animation-name: darVuelta;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+        }
+
+        .rebote {
+            animation-name: rebote;
+            animation-duration: 2s;
+            animation-fill-mode: backwards;
+            animation-iteration-count: infinite;
+        }
+
+        @keyframes darVuelta {
+            0% {
+                top: 60px;
+                left: 40px;
+            }
+
+            25% {
+                top: 60px;
+                left: calc(90vw - 40px);
+            }
+
+            50% {
+                top: calc(90vh - 60px);
+                left: calc(90vw - 40px);
+            }
+
+            75% {
+                top: calc(90vh - 60px);
+                left: 40px;
+            }
+
+            100% {
+                top: 60px;
+                left: 40px;
+            }
+        }
+
+        @keyframes rebote {
+            0% {
+                top: 60px;
+            }
+
+            50% {
+                top: 90vh;
+            }
+
+            100% {
+                top: 60px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button id="vuelta">Dar un vuelta</button>
+    <button id="rebote">Rebote</button>
+    <button id="cambiar">Cambiar poligono</button>
+    <hr>
+    <div id="cuadrado"></div>
+
+
+    <script>
+
+        const btnVuelta = document.querySelector('#vuelta');
+        const btnRebote = document.querySelector('#rebote');
+        const btnCambio = document.querySelector('#cambiar');
+
+        const poligono = document.querySelector('#cuadrado');
+
+        btnVuelta.addEventListener('click', () => {
+            poligono.className = "";
+            void poligono.offsetTop;
+            poligono.classList.add('darUnaVuelta');
+        })
+
+        btnRebote.addEventListener('click', () => {
+            poligono.className = "";
+            void poligono.offsetTop;
+            poligono.classList.add('rebote');
+        })
+
+
+        btnCambio.addEventListener('click', () => {
+            poligono.classList.toggle('circulo');
+        })
+    </script>
+</body>
+
+</html>
