@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* header */
+
+header {
+    background-color: darkgreen;
+    padding: 20px 0px;
+    border-bottom: 3px solid yellow;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .container div {
+    width: 100%;
+}
+
+header select, header input {
+    padding: 5px;
+}
+
+header form {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* fin header */
+
+/* footer */
+
+footer {
+    background-color: darkgreen;
+    padding: 20px 0px;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .container button {
+    width: 100%;
+    border: 0;
+    background-color: yellow;
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+footer .container button:hover {
+    background-color: gold;
+}
+
+/* fin footer */
+
+/* main */
+
+main {
+    padding-bottom: 90px;
+}
+
+main h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+main .flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main .flex article {
+    margin: 10px;
+    width: calc(50% - 20px);
+}
+
+/* fin main */
+
+@media(min-width: 768px) {
+    main .flex article {
+        width: calc(25% - 20px);
+    }
+}
