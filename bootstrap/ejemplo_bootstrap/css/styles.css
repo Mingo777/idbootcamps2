@@ -1,0 +1,17 @@
+.bg-dark{
+    background-color: black !important;
+}
+
+.hero{
+    height: 80vh;
+    background-image: url('../images/bosque.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-color: gray;
+    background-blend-mode: multiply;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
