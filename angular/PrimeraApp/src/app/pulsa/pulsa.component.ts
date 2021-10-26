@@ -8,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 export class PulsaComponent implements OnInit {
 
   texto: string;
+  colorSeleccionado: string;
 
   constructor() {
     this.texto = 'Texto a mostrar';
+    this.colorSeleccionado = 'rojo';
   }
 
   ngOnInit(): void {
@@ -24,6 +26,10 @@ export class PulsaComponent implements OnInit {
   manejarInput($event: any) {
     console.log($event.target.value);
     this.texto = $event.target.value;
+  }
+
+  cambiarColor(color: string) {
+    this.colorSeleccionado = color;
   }
 
 }

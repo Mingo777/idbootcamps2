@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'PrimeraApp';
+
+  numeros: number[];
+
+  constructor() {
+    this.numeros = [23, 4, 87, 12];
+  }
+
 }

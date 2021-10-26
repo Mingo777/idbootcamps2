@@ -1,0 +1,23 @@
+<div class="calculadora">
+    <p class="display">{{resultado}}</p>
+    <div class="botones">
+        <button (click)="manejarClick('1')">1</button>
+        <button (click)="manejarClick('2')">2</button>
+        <button (click)="manejarClick('3')">3</button>
+        <button (click)="manejarClick('4')">4</button>
+        <button (click)="manejarClick('5')">5</button>
+        <button (click)="manejarClick('6')">6</button>
+        <button (click)="manejarClick('7')">7</button>
+        <button (click)="manejarClick('8')">8</button>
+        <button (click)="manejarClick('9')">9</button>
+        <button (click)="manejarClick('0')">0</button>
+    </div>
+    <div class="operadores">
+        <button (click)="manejarClick('+')">+</button>
+        <button (click)="manejarClick('-')">-</button>
+        <button (click)="manejarClick('*')">*</button>
+        <button (click)="manejarClick('/')">/</button>
+        <button (click)="resolver()">=</button>
+    </div>
+    <p class="brand">Texas Instruments</p>
+</div>

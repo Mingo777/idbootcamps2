@@ -2,3 +2,10 @@
 <button (click)="manejarClick()">PULSA!!!</button>
 
 <input type="text" (input)="manejarInput($event)">
+
+<div>
+    <button (click)="cambiarColor('rojo')">Rojo</button>
+    <button (click)="cambiarColor('amarillo')">Amarillo</button>
+    <button (click)="cambiarColor('azul')">Azul</button>
+</div>
+<p>El color seleccionado es {{colorSeleccionado}}</p>

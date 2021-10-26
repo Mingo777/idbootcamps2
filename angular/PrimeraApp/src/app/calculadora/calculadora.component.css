@@ -1,0 +1,58 @@
+button{
+    border: 1px solid gray;
+    height: 30px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(172, 172, 172);
+}
+
+button:active{
+    background-color: gray;
+}
+
+.calculadora{
+    background-color: lightseagreen;
+    border: 1px solid black;
+    padding: 10px;
+    width: 200px;
+}
+
+.display{
+    background-color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    margin: 10px 0;
+    text-align: right;
+}
+
+.botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.botones button{
+    width: 33.33%;
+}
+
+.botones button:last-child{
+    width: 100%;
+}
+
+.operadores button{
+    width: 25%;
+}
+
+.operadores button:last-child{
+    width: 100%;
+}
+
+.brand{
+    font-size: .7em;
+    color: rgb(21, 121, 116);
+    text-align: center;
+    margin: 10px 0 0 0;
+}
