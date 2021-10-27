@@ -7,6 +7,10 @@ import { CronometroComponent } from './cronometro/cronometro.component';
 import { PulsaComponent } from './pulsa/pulsa.component';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
 import { DespedidaComponent } from './despedida/despedida.component';
+import { ProfileCardComponent } from './profile-card/profile-card.component';
+import { SumaComponent } from './suma/suma.component';
+import { FormularioComponent } from './formulario/formulario.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,10 +19,13 @@ import { DespedidaComponent } from './despedida/despedida.component';
     CronometroComponent,
     PulsaComponent,
     CalculadoraComponent,
-    DespedidaComponent
+    DespedidaComponent,
+    ProfileCardComponent,
+    SumaComponent,
+    FormularioComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,26 @@
+<div>
+    <p>{{texto}}</p>
+    <input type="text" [(ngModel)]="texto">
+    <button (click)="manejarClick()">Cambia</button>
+</div>
+
+<!-- 
+
+    ngModel dentro de un formulario va sin la etiqueta FORM
+    ¡Cuidado a la propiedad name!
+ -->
+<div>
+    <div>
+        <label class="form-label">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="persona.nombre">
+    </div>
+    <div>
+        <label class="form-label">Apellidos</label>
+        <input type="text" class="form-control" [(ngModel)]="persona.apellidos">
+    </div>
+    <div>
+        <label class="form-label">Edad</label>
+        <input type="text" class="form-control" [(ngModel)]="persona.edad">
+    </div>
+</div>
+<p>{{persona | json}}</p>

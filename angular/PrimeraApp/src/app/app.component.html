@@ -1,14 +1,34 @@
-<despedida nombre="Luis"></despedida>
-<despedida nombre="Andrés"></despedida>
+<app-formulario></app-formulario>
+
+
+<!-- <suma [num1]="numeros[2]" [num2]="19" (sumaResuelta)="onSumaResuelta($event)">
+</suma>
+
+
+<suma [num1]="2" [num2]="numeros[3]" (sumaResuelta)="onSumaResuelta($event)"></suma> -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-3">
+            <profile-card nombre="Mario Girón" cargo="CEO de cosas varias"></profile-card>
+        </div>
+        <div class="col-3">
+            <profile-card nombre="Laura Diaz" cargo="CMO Manager Talent Specialist"></profile-card>
+        </div>
+    </div>
+</div>
+
+<!-- <despedida nombre="Luis"></despedida>
+<despedida nombre="Andrés"></despedida> -->
 
 <!-- <h1>Hola Mundo Angular!!</h1>
 <saludo></saludo>-->
-<cronometro [contador]="numeros[0]"></cronometro>
+<!-- <cronometro [contador]="numeros[0]"></cronometro>
 <cronometro [contador]="numeros[1]"></cronometro>
 <cronometro [contador]="numeros[2]"></cronometro>
-<cronometro [contador]="numeros[3]"></cronometro>
+<cronometro [contador]="numeros[3]"></cronometro> -->
+<cronometro [contador]="8" (cuentaTerminada)="onCuentaTerminada($event)"></cronometro>
 <!-- <cronometro></cronometro>
-<cronometro></cronometro>
 <cronometro></cronometro> -->
 <!-- <pulsa></pulsa> -->
 <calculadora></calculadora>

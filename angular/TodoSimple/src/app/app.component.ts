@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Tarea } from './interfaces/tarea.interface';
 
 @Component({
   selector: 'app-root',
@@ -7,18 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  numeros: number[];
+  arrTareas: Tarea[];
 
   constructor() {
-    this.numeros = [23, 4, 87, 12];
+    this.arrTareas = [];
   }
 
-  onSumaResuelta($event: number) {
-    console.log(`El resultado de la suma es ${$event}`);
-  }
-
-  onCuentaTerminada($event: string) {
-    console.log($event);
+  onTareaCreada($event: Tarea) {
+    this.arrTareas.push($event);
+    console.log(this.arrTareas);
   }
 
 }
