@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+
+      <lista-productos titulo="COMIDA" [productos]="arrComida" (productoSeleccionado)="onProductoSeleccionado($event)">
+      </lista-productos>
+
+      <lista-productos titulo="BEBIDA" [productos]="arrBebida"></lista-productos>
+
+    </div>
+  </div>
+</div>

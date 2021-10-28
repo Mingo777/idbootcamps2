@@ -1,0 +1,33 @@
+<button (click)="agregaEpisodio()">AGREGA EPISODIO</button>
+
+<div class="episodios">
+    <div class="episodio" *ngFor="let episodio of episodios">
+        <h3>{{episodio.title}}</h3>
+        <p>{{episodio.director}}</p>
+    </div>
+</div>
+
+<!-- Mostrar los episodios en una TABLA -->
+<table class="table mb-5">
+    <thead>
+        <tr>
+            <th>Índice</th>
+            <th>Título</th>
+            <th>Director</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- index, first, last, even, odd -->
+        <tr *ngFor="let episodio of episodios; let indice = index; let primero = first; let ultimo = last; let par = even; let impar = odd;"
+            [ngClass]="{ filaPar: par, filaImpar: !par }">
+            <td>{{indice+1}}</td>
+            <td>{{episodio.title}}</td>
+            <td>{{episodio.director}}</td>
+            <td>{{primero}}</td>
+            <td>{{ultimo}}</td>
+            <td>{{par}}</td>
+            <td>{{impar}}</td>
+            <td *ngIf="primero">PRIMERO</td>
+        </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+<div class="botones">
+    <button (click)="cambiaColorFondo('dodgerblue')">Dodgerblue</button>
+    <button (click)="cambiaColorFondo('goldenrod')">Goldenrod</button>
+    <button (click)="cambiaColorFondo('tomato')">Tomato</button>
+</div>
+
+<input type="text" (input)="cambiaColorTexto($event)">
+
+<input type="text" [(ngModel)]="estilosParrafo.color">
+
+<input type="range" min="12" max="100" step="1" (input)="cambiaFontSize($event)">
+
+<p [ngStyle]="estilosParrafo">Lorem ipsum dolor sit amet consectetur
+    adipisicing elit. Doloribus, sed!</p>

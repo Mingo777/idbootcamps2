@@ -1,0 +1,10 @@
+<button (click)="pulsarBoton()">{{ activo ? 'OCULTAR' : 'MOSTRAR' }}</button>
+
+<p *ngIf="activo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, illo.</p>
+<p *ngIf="!activo">Va usté muy cargadoo al ataquerl diodeno no puedor a wan no te digo trigo</p>
+
+<!-- 
+    - Declarar la prop activo en el TS
+    - Inicializarla en el constructor
+    - Cuando pulsemos el botón, si activo es TRUE, ponerle valor FALSE, si activo es FALSE ponerle valor TRUE
+ -->
