@@ -5,8 +5,13 @@
       <lista-productos titulo="COMIDA" [productos]="arrComida" (productoSeleccionado)="onProductoSeleccionado($event)">
       </lista-productos>
 
-      <lista-productos titulo="BEBIDA" [productos]="arrBebida"></lista-productos>
+      <lista-productos titulo="BEBIDA" [productos]="arrBebida" (productoSeleccionado)="onProductoSeleccionado($event)">
+      </lista-productos>
 
+    </div>
+
+    <div class="col-4">
+      <app-comanda [arrProductos]="arrSeleccionados"></app-comanda>
     </div>
   </div>
 </div>

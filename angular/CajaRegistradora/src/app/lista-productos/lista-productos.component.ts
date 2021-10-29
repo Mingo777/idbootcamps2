@@ -23,7 +23,6 @@ export class ListaProductosComponent implements OnInit {
   }
 
   manejarClick(producto: Producto) {
-    console.log(producto);
     this.productoSeleccionado.emit(producto);
   }
 

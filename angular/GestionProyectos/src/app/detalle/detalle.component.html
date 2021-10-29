@@ -1,0 +1,12 @@
+<div class="proyecto" [ngClass]="{ activo: proyecto.activo, inactivo: !proyecto.activo }">
+    <h3>{{proyecto.titulo}}</h3>
+    <p>{{proyecto.descripcion}}</p>
+    <p>{{proyecto.departamento}}</p>
+    <div class="botones">
+        <button class="btn" [ngClass]="{ 'btn-success': !proyecto.activo, 'btn-warning': proyecto.activo }"
+            (click)="cambiaActivo()">
+            {{ proyecto.activo ? 'Desactiva' : 'Activa' }}
+        </button>
+        <button>Borrar</button>
+    </div>
+</div>

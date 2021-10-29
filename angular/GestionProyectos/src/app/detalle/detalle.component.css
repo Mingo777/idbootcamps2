@@ -1,0 +1,14 @@
+.proyecto{
+    border: 1px solid gray;
+    background-color: lightgray;
+    padding: 20px;
+    margin: 20px;
+}
+
+.activo{
+    border-color: lightgreen;
+}
+
+.inactivo{
+    border-color: tomato;
+}

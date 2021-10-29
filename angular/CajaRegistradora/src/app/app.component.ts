@@ -11,7 +11,11 @@ export class AppComponent {
   arrComida: Producto[];
   arrBebida: Producto[];
 
+  arrSeleccionados: Producto[];
+
   constructor() {
+    this.arrSeleccionados = [];
+
     this.arrBebida = [{
       nombre: 'cocacola',
       imagen: 'https://pbs.twimg.com/profile_images/1349020259144052738/4VgvQMQf_400x400.jpg',
@@ -90,7 +94,8 @@ export class AppComponent {
   }
 
   onProductoSeleccionado($event: Producto) {
-    console.log($event);
+    this.arrSeleccionados.push($event);
+    console.log(this.arrSeleccionados);
   }
 
 }

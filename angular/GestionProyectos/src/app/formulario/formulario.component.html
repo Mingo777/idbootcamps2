@@ -1,0 +1,19 @@
+<div class="formulario">
+    <div class="mb-3">
+        <label class="form-label">Título</label>
+        <input type="text" class="form-control" [(ngModel)]="nuevoProyecto.titulo">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Departamento</label>
+        <select class="form-select" [(ngModel)]="nuevoProyecto.departamento">
+            <option value="contabilidad">Contabilidad</option>
+            <option value="marketing">Marketing</option>
+            <option value="desarrollo">Desarrollo</option>
+        </select>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <textarea class="form-control" rows="5" [(ngModel)]="nuevoProyecto.descripcion"></textarea>
+    </div>
+    <button class="btn btn-primary" (click)="manejarClick()">Enviar</button>
+</div>

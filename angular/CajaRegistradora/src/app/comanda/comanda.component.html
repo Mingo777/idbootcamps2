@@ -1,1 +1,7 @@
-<p>comanda works!</p>
+<h2>TOTAL: {{sumaTotal() | number:'1.2-2'}}€</h2>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let producto of arrProductos; let indice = index;"
+        (click)="borrarProducto(indice)">
+        {{producto.nombre}} X {{producto.precio}}
+    </li>
+</ul>
