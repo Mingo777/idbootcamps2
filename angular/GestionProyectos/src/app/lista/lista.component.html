@@ -1,7 +1,7 @@
 <div class="proyectos">
     <div class="row">
-        <div class="col-6" *ngFor="let proy of arrProyectos">
-            <app-detalle [proyecto]="proy"></app-detalle>
+        <div class="col-6" *ngFor="let proy of arrProyectos; let indice = index;">
+            <app-detalle [proyecto]="proy" (pulsaBorrar)="onPulsaBorrar(indice)"></app-detalle>
         </div>
     </div>
 </div>

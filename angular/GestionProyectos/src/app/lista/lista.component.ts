@@ -17,4 +17,8 @@ export class ListaComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onPulsaBorrar(indice: number) {
+    this.arrProyectos.splice(indice, 1);
+  }
+
 }

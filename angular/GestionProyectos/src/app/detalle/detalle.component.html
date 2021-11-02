@@ -2,11 +2,17 @@
     <h3>{{proyecto.titulo}}</h3>
     <p>{{proyecto.descripcion}}</p>
     <p>{{proyecto.departamento}}</p>
+    <div [ngSwitch]="proyecto.departamento" class="depto-icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/1570/1570887.png" *ngSwitchCase="'contabilidad'">
+        <img src="https://cdn0.iconfinder.com/data/icons/marketing-and-growth-line/64/marketing_advertising_megaphone_marketing_icon-512.png"
+            *ngSwitchCase="'marketing'">
+        <img src="https://static.thenounproject.com/png/1333615-200.png" *ngSwitchCase="'desarrollo'">
+    </div>
     <div class="botones">
         <button class="btn" [ngClass]="{ 'btn-success': !proyecto.activo, 'btn-warning': proyecto.activo }"
             (click)="cambiaActivo()">
             {{ proyecto.activo ? 'Desactiva' : 'Activa' }}
         </button>
-        <button>Borrar</button>
+        <button (click)="borrarProyecto()">Borrar</button>
     </div>
 </div>

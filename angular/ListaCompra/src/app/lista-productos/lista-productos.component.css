@@ -1,0 +1,22 @@
+.productos{
+    background-color: lightgray;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.producto{
+    width: 120px;
+    padding: 20px;
+    border: 1px solid black;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.dpto-img img{
+    width: 100%;
+}

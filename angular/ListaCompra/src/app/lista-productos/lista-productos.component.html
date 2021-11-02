@@ -1,0 +1,14 @@
+<div class="productos">
+    <div class="producto" *ngFor="let prod of productos; let indice = index;" (click)="manejarClick(indice)">
+        <h4>{{prod.nombre}}</h4>
+        <p>{{prod.cantidad}}</p>
+        <!-- <div [ngSwitch]="prod.departamento" class="dpto-img">
+            <img src="assets/images/panaderia.png" *ngSwitchCase="'panaderia'">
+            <img src="assets/images/hogar.png" *ngSwitchCase="'hogar'">
+            <img src="assets/images/carniceria.png" *ngSwitchCase="'carniceria'">
+            <img src="assets/images/pescaderia.png" *ngSwitchCase="'pescaderia'">
+        </div> -->
+
+        <img [src]="'assets/images/'+prod.departamento+'.png'">
+    </div>
+</div>

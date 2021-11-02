@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Proyecto } from '../interfaces/proyecto.interface';
 
 @Component({
@@ -10,8 +10,11 @@ export class DetalleComponent implements OnInit {
 
   @Input() proyecto: Proyecto;
 
+  @Output() pulsaBorrar: EventEmitter<boolean>;
+
   constructor() {
     this.proyecto = { activo: false };
+    this.pulsaBorrar = new EventEmitter();
   }
 
   ngOnInit(): void {
@@ -19,6 +22,10 @@ export class DetalleComponent implements OnInit {
 
   cambiaActivo() {
     this.proyecto.activo = !this.proyecto.activo;
+  }
+
+  borrarProyecto() {
+    this.pulsaBorrar.emit(true);
   }
 
 }

@@ -7,6 +7,7 @@ import { EstilosComponent } from './estilos/estilos.component';
 import { SemaforoComponent } from './semaforo/semaforo.component';
 import { CondicionalComponent } from './condicional/condicional.component';
 import { ListaEpisodiosComponent } from './lista-episodios/lista-episodios.component';
+import { SubrayadoDirective } from './subrayado.directive';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListaEpisodiosComponent } from './lista-episodios/lista-episodios.compo
     EstilosComponent,
     SemaforoComponent,
     CondicionalComponent,
-    ListaEpisodiosComponent
+    ListaEpisodiosComponent,
+    SubrayadoDirective
   ],
   imports: [
     BrowserModule, FormsModule

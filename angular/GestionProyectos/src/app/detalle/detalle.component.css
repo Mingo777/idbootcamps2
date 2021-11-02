@@ -12,3 +12,7 @@
 .inactivo{
     border-color: tomato;
 }
+
+.depto-icon img{
+    width: 50px;
+}

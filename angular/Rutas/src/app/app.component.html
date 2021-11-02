@@ -1,0 +1,24 @@
+<!-- Navegación a través del HTML -->
+<ul>
+  <li>
+    <a [routerLink]="['/inicio']" routerLinkActive="active">Home</a>
+  </li>
+  <li>
+    <a [routerLink]="['/informacion']" routerLinkActive="active">Información</a>
+  </li>
+  <li>
+    <a [routerLink]="['/contacto']" routerLinkActive="active">Contacto</a>
+  </li>
+</ul>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- 3 botones. Cada uno con su click a la función manejarClick y recibiendo como parámetro la ruta hacia la que van a navegar -->
+
+<div class="botones">
+  <button (click)="manejarClick('/inicio')">Home</button>
+  <button (click)="manejarClick('/informacion')">Información</button>
+  <button (click)="manejarClick('/contacto')">Contacto</button>
+</div>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <formulario (productoCreado)="onProductoCreado($event)"></formulario>
+    </div>
+    <div class="col-6">
+      <div class="row">
+        <div class="col-12" *ngIf="productosPendientes.length > 0">
+          <h4>Productos Pendientes</h4>
+          <lista-productos [productos]="productosPendientes" (productoSeleccionado)="onProductoSeleccionado($event)">
+          </lista-productos>
+        </div>
+        <div class="col-12" *ngIf="productosComprados.length > 0">
+          <h4>Productos Comprados</h4>
+          <lista-productos [productos]="productosComprados" (productoSeleccionado)="onProductoPendiente($event)">
+          </lista-productos>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mostrar las listas únicamente si los arrays tienen elementos -->
+
+<!-- <lista-productos [productos]="productosComprados" (productoSeleccionado)="onProductoSeleccionado($event)"></lista-productos> -->
