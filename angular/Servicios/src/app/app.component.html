@@ -1,0 +1,11 @@
+<button (click)="recuperaActivos()">ACTIVOS!!!!</button>
+<button (click)="recuperaTodos()">TODOS!!!!</button>
+
+<div class="empleados">
+  <div class="empleado" *ngFor="let empleado of arrEmpleados">
+    <h3>{{empleado.nombre}} {{empleado.apellidos}}</h3>
+    <p>{{empleado.edad}}</p>
+    <p>{{empleado.email}}</p>
+    <p>{{empleado.activo}}</p>
+  </div>
+</div>
