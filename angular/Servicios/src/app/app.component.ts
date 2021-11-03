@@ -9,9 +9,11 @@ import { Empleado, EmpleadosService } from './services/empleados.service';
 export class AppComponent {
 
   arrEmpleados: Empleado[];
+  nuevoEmpleado: Empleado;
 
   constructor(private empleadosService: EmpleadosService) {
     this.arrEmpleados = [];
+    this.nuevoEmpleado = { activo: false };
   }
 
   ngOnInit() {
@@ -24,6 +26,15 @@ export class AppComponent {
 
   recuperaTodos() {
     this.arrEmpleados = this.empleadosService.getAll();
+  }
+
+  envioEmpleado() {
+    this.empleadosService.create(this.nuevoEmpleado);
+    this.nuevoEmpleado = { activo: false };
+  }
+
+  onBuscaEdad($event: any) {
+    this.arrEmpleados = this.empleadosService.getMayores($event.target.value);
   }
 
 }

@@ -1,19 +1,18 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmpleadosService } from './services/empleados.service';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { TabBarComponent } from './tab-bar/tab-bar.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavBarComponent,
+    TabBarComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

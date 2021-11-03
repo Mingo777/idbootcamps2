@@ -1,6 +1,20 @@
 <button (click)="recuperaActivos()">ACTIVOS!!!!</button>
 <button (click)="recuperaTodos()">TODOS!!!!</button>
 
+<div class="formulario">
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="nuevoEmpleado.nombre">
+  <label>Apellidos</label>
+  <input type="text" [(ngModel)]="nuevoEmpleado.apellidos">
+  <label>Edad</label>
+  <input type="text" [(ngModel)]="nuevoEmpleado.edad">
+  <label>Email</label>
+  <input type="text" [(ngModel)]="nuevoEmpleado.email">
+  <button (click)="envioEmpleado()">Enviar</button>
+</div>
+
+<input type="range" min="1" max="99" step="1" (input)="onBuscaEdad($event)">
+
 <div class="empleados">
   <div class="empleado" *ngFor="let empleado of arrEmpleados">
     <h3>{{empleado.nombre}} {{empleado.apellidos}}</h3>

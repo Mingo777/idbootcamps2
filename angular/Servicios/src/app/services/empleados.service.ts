@@ -2,10 +2,10 @@ import { Injectable } from '@angular/core';
 
 // nombre, apellidos, edad, email, activo
 export interface Empleado {
-  nombre: string;
-  apellidos: string;
-  edad: number;
-  email: string;
+  nombre?: string;
+  apellidos?: string;
+  edad?: number;
+  email?: string;
   activo: boolean;
 }
 
@@ -53,6 +53,14 @@ export class EmpleadosService {
 
   getActivesV3(): Empleado[] {
     return this.arr.filter(empleado => empleado.activo);
+  }
+
+  create(nuevoEmpleado: Empleado) {
+    this.arr.push(nuevoEmpleado);
+  }
+
+  getMayores(edad: number): Empleado[] {
+    return this.arr.filter((empleado) => empleado.edad && empleado.edad > edad);
   }
 
 }

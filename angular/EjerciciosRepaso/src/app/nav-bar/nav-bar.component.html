@@ -1,0 +1,13 @@
+<!-- <ul [ngStyle]="{ backgroundColor: colorBarra }">
+    <li [ngStyle]="{backgroundColor : colorBotones}" (click)="manejarClick('home')">Home</li>
+    <li [ngStyle]="{backgroundColor : colorBotones}" (click)="manejarClick('projects')">Projects</li>
+    <li [ngStyle]="{backgroundColor : colorBotones}" (click)="manejarClick('info')">Info</li>
+    <li [ngStyle]="{backgroundColor : colorBotones}" (click)="manejarClick('about')">About</li>
+</ul> -->
+
+<ul [ngStyle]="{ backgroundColor: colorBarra }">
+    <li *ngFor="let opcion of opciones" [ngStyle]="{backgroundColor : colorBotones}"
+        (click)="manejarClick(opcion.toLowerCase())">
+        {{opcion}}
+    </li>
+</ul>
